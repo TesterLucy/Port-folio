@@ -68,7 +68,7 @@ function showFile(type, btn) {
 
   // Cargar el .py solo la primera vez
   if (type === 'code' && !codeLoaded) {
-    fetch('NPproblems.py')
+    fetch('simulaciones.py')
       .then(res => res.text())
       .then(code => {
         const block = document.getElementById('code-block');
