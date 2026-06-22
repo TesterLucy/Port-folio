@@ -5,7 +5,7 @@
 
 **[EN]** A digital ecosystem where **AI**, **Physical Robotics**, and **Web Development** converge. This isn't your typical static portfolio; it's a modular architecture designed to explore deep technical projects.
 
-### 🌐 [Ver Portafolio / View Portfolio](https://tu-link-de-vercel.vercel.app/)
+### 🌐 [Ver Portafolio / View Portfolio](https://port-folio-cristianleon.vercel.app/)
 
 ---
 
