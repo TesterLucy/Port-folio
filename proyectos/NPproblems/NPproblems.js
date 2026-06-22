@@ -12,8 +12,8 @@ function switchLang(lang, btn) {
   // Traducir secciones estáticas
   const isEn = lang === 'en';
 
-  document.getElementById('compare-label').textContent    = isEn ? '// technical comparison' : '// comparativa técnica';
-  document.getElementById('conclusions-label').textContent = isEn ? '// key findings'         : '// conclusiones';
+  document.getElementById('compare-label').textContent = isEn ? '// technical comparison' : '// comparativa técnica';
+  document.getElementById('conclusions-label').textContent = isEn ? '// key findings' : '// conclusiones';
 
   const conclusions = {
     c1: {
@@ -66,18 +66,26 @@ function showFile(type, btn) {
   document.getElementById('viewer-' + type).classList.remove('hidden');
   btn.classList.add('active');
 
-  // Cargar el .py solo la primera vez
-  if (type === 'code' && !codeLoaded) {
-    fetch('simulaciones.py')
-      .then(res => res.text())
-      .then(code => {
-        const block = document.getElementById('code-block');
-        block.textContent = code;
-        hljs.highlightElement(block);
-        codeLoaded = true;
-      })
-      .catch(() => {
-        document.getElementById('code-block').textContent = '❌ No se pudo cargar el archivo.';
-      });
+  // ----- CAMBIO: abrir GitHub en vez de cargar localmente el .py -----
+  if (type === 'code') {
+    // Reemplaza por la URL real de tu archivo en GitHub (ejemplo apunta a main)
+    const GITHUB_PY_URL = 'https://github.com/TesterLucy/SimulacionCarburadorVSFullInyection.git';
+
+    // Abrir en nueva pestaña
+    window.open(GITHUB_PY_URL, '_blank');
+
+    // Mostrar mensaje temporal en el visor (opcional)
+    const block = document.getElementById('code-block');
+    if (block) {
+      block.textContent = 'Opening code on GitHub...';
+    }
+
+    // No intentamos hacer fetch localmente
+    return;
+  }
+
+  // Mantener la lógica anterior para PDF u otros tipos si es necesario
+  if (type === 'pdf') {
+    // el iframe ya apunta al PDF; nada extra a hacer aquí
   }
 }
