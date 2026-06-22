@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Full Injection vs Carburación — Cristian Leon</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Oswald:wght@400;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="NPproblems.css" />
+</head>
+
+<body>
+
+  <!-- TOPBAR -->
+  <nav class="topbar">
+    <a href="../../index.html" class="back-btn">← Volver al portafolio</a>
+    <div class="topbar-tag">PROYECTO 01</div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="moto-hero">
+    <div class="fire-bg"></div>
+    <div class="hero-content">
+      <div class="project-num">01</div>
+      <div class="moto-eyebrow">🔥 Análisis de Algoritmos · Universidad Sergio Arboleda · Nov 2025</div>
+      <h1 class="moto-title">
+        FULL INJECTION<br />
+        <span>VS CARBURACIÓN</span>
+      </h1>
+      <p class="moto-subtitle">Modelo computacional con Monte Carlo y NumPy para comparar sistemas de suministro de
+        combustible en motores 125cc.</p>
+
+      <div class="lang-tabs">
+        <button class="lang-btn active" onclick="switchLang('es', this)">🇨🇴 Español</button>
+        <button class="lang-btn" onclick="switchLang('en', this)">🇺🇸 English</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <!-- DESCRIPCIÓN -->
+    <section class="section">
+      <div class="lang-content active" id="content-es">
+        <div class="section-label">// descripción</div>
+        <p class="body-text">
+          Este proyecto desarrolla un <strong>modelo computacional</strong> que simula y compara el suministro de
+          combustible en motores de pequeña cilindrada (125cc), contrastando la <strong>inyección electrónica</strong>
+          frente al <strong>carburador tradicional</strong>. Usando <strong>muestreo Monte Carlo</strong> y computación
+          vectorizada con NumPy, se generan mapas de combustible RPM × TPS que revelan las diferencias reales de
+          rendimiento entre ambos sistemas.
+        </p>
+        <p class="body-text">
+          El problema fue modelado como un espacio combinatorio de variables (RPM, TPS, IAT, presión ambiental,
+          eficiencia volumétrica), cuya naturaleza "NP-like" justificó el uso de simulación estocástica en lugar de
+          fuerza bruta.
+        </p>
+      </div>
+
+      <div class="lang-content hidden" id="content-en">
+        <div class="section-label">// description</div>
+        <p class="body-text">
+          This project develops a <strong>computational model</strong> that simulates and compares fuel delivery in
+          small-displacement engines (125cc), contrasting <strong>electronic fuel injection</strong> against a
+          <strong>traditional carburetor</strong>. Using <strong>Monte Carlo sampling</strong> and NumPy vectorized
+          computing, RPM × TPS fuel maps are generated to reveal real performance differences between both systems.
+        </p>
+        <p class="body-text">
+          The problem was modeled as a combinatorial space of variables (RPM, TPS, IAT, ambient pressure, volumetric
+          efficiency), whose NP-like nature justified the use of stochastic simulation instead of brute force.
+        </p>
+      </div>
+    </section>
+
+    <!-- COMPARATIVA -->
+    <section class="section">
+      <div class="section-label" id="compare-label">// comparativa técnica</div>
+      <div class="compare-grid">
+        <div class="compare-card carb">
+          <div class="compare-icon">⚙️</div>
+          <div class="compare-title">CARBURADOR</div>
+          <ul>
+            <li>Basado en efecto Venturi</li>
+            <li>Circuitos físicos (chicler/aguja)</li>
+            <li>Robusto y predecible</li>
+            <li>Menor precisión ante variables ambientales</li>
+            <li>Mayor consumo medio simulado</li>
+          </ul>
+        </div>
+        <div class="compare-vs">VS</div>
+        <div class="compare-card efi">
+          <div class="compare-icon">💉</div>
+          <div class="compare-title">FULL INJECTION (EFI)</div>
+          <ul>
+            <li>Controlada por ECU + sensores</li>
+            <li>TPS, IAT, MAP en tiempo real</li>
+            <li>Respuesta suave y corregida</li>
+            <li>Compensa altitud y temperatura</li>
+            <li>Mayor autonomía en tanque de 11L</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FÓRMULAS -->
+    <section class="section">
+      <div class="section-label">// fundamento matemático</div>
+      <div class="formula-grid">
+        <div class="formula-card">
+          <div class="formula-label">Relación Aire-Combustible (AFR)</div>
+          <div class="formula">AFR = m_aire / m_combustible ≈ 14.7</div>
+        </div>
+        <div class="formula-card">
+          <div class="formula-label">Ancho de Pulso del Inyector</div>
+          <div class="formula">pw (s) ∝ m_combustible / ṁ_inyector</div>
+        </div>
+        <div class="formula-card">
+          <div class="formula-label">Densidad del Aire</div>
+          <div class="formula">ρ ∝ 1/T</div>
+        </div>
+        <div class="formula-card">
+          <div class="formula-label">Conversión Flujo Inyector</div>
+          <div class="formula">
+            L_min = cc_min / 1000<br />
+            kg_min = L_min × densidad<br />
+            kg_s = kg_min / 60
+          </div>
+        </div>
+        <div class="formula-card wide">
+          <div class="formula-label">Consumo (L/h)</div>
+          <div class="formula">
+            duty = pulse_ms / 1000 &nbsp;|&nbsp;
+            flujo_L_s = (kg_s × duty) / densidad &nbsp;|&nbsp;
+            L/h = flujo_L_s × 3600
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONCLUSIONES -->
+    <section class="section">
+      <div class="section-label" id="conclusions-label">// conclusiones</div>
+      <div class="conclusion-list">
+        <div class="conclusion-item">
+          <div class="c-icon">🏍️</div>
+          <div class="c-text" id="c1">La EFI muestra menor consumo medio y mayor autonomía en tanques de 11L bajo
+            condiciones simuladas.</div>
+        </div>
+        <div class="conclusion-item">
+          <div class="c-icon">🌡️</div>
+          <div class="c-text" id="c2">El carburador es menos preciso ante variaciones de altitud, temperatura y densidad
+            del aire.</div>
+        </div>
+        <div class="conclusion-item">
+          <div class="c-icon">🏔️</div>
+          <div class="c-text" id="c3">La diferencia de rendimiento es más notoria en condiciones de páramo y baja
+            temperatura.</div>
+        </div>
+        <div class="conclusion-item">
+          <div class="c-icon">🔬</div>
+          <div class="c-text" id="c4">Monte Carlo permitió explorar el espacio combinatorio de variables (RPM, TPS, IAT,
+            MAP) de forma eficiente.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STACK -->
+    <section class="section">
+      <div class="section-label">// tecnologías usadas</div>
+      <div class="stack-row">
+        <div class="stack-pill">🐍 Python</div>
+        <div class="stack-pill">📐 NumPy</div>
+        <div class="stack-pill">🎲 Monte Carlo</div>
+        <div class="stack-pill">📊 Matplotlib</div>
+        <div class="stack-pill">📄 LaTeX</div>
+      </div>
+    </section>
+
+    <!-- ARCHIVOS -->
+    <section class="section">
+      <div class="section-label">// archivos del proyecto</div>
+
+      <!-- Botones para cambiar entre archivos -->
+      <div class="file-tabs">
+        <button class="file-tab active" onclick="showFile('pdf', this)">📄 Informe Técnico (PDF)</button>
+        <button class="file-tab" onclick="showFile('code', this)">🐍 Código Python</button>
+      </div>
+
+      <!-- VISOR PDF -->
+      <div class="file-viewer" id="viewer-pdf">
+        <iframe src="CarboradoresvsFullInyection.pdf" width="100%" height="600px"></iframe>
+      </div>
+
+      <!-- VISOR CÓDIGO -->
+      <div class="file-viewer hidden" id="viewer-code">
+        <div class="code-header">
+          <span class="code-filename">🐍 simulaciones.py</span>
+        </div>
+        <pre><code class="language-python" id="code-block">Cargando...</code></pre>
+      </div>
+
+    </section>
+
+  </main>
+
+  <footer class="moto-footer-bar">
+    <span>© 2025 Cristian Leon</span>
+    <a href="../../index.html">← Volver al portafolio</a>
+  </footer>
+
+  <script src="NPproblems.js"></script>
+</body>
+
+</html>

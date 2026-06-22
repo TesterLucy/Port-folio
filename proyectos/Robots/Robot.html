@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Robot de Fútbol</title>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="Robot.css"/>
+</head>
+<body>
+
+  <nav class="topbar">
+    <a href="../../index.html" class="back-btn">← <span data-es="Volver al portafolio" data-en="Back to portfolio">Volver al portafolio</span></a>
+    <div class="topbar-right">
+      <span class="breadcrumb" data-es="Proyectos / Robot de Fútbol" data-en="Projects / Football Robot">Proyectos / Robot de Fútbol</span>
+      <div class="lang-switch">
+        <button class="lang-btn active" onclick="setLang('es')">ES</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-field" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-badge" data-es="⚽ Robótica · Hardware · Universidad Sergio Arboleda" data-en="⚽ Robotics · Hardware · Universidad Sergio Arboleda">⚽ Robótica · Hardware · Universidad Sergio Arboleda</div>
+      <h1>ROBOT <span class="accent">FUTBOLISTA</span></h1>
+      <p class="hero-subtitle"
+         data-es="Agente autónomo de fútbol construido con ESP32, motores DC y control Bluetooth. Diseño estructural en MDF, sensores ultrasónicos y análisis estadístico de rendimiento en múltiples superficies."
+         data-en="Autonomous football agent built with ESP32, DC motors and Bluetooth control. MDF structural design, ultrasonic sensors and statistical performance analysis on multiple surfaces.">
+        Agente autónomo de fútbol construido con ESP32, motores DC y control Bluetooth. Diseño estructural en MDF, sensores ultrasónicos y análisis estadístico de rendimiento en múltiples superficies.
+      </p>
+      <div class="hero-links">
+        <a href="#" target="_blank" class="btn-primary">📂 <span data-es="Ver en GitHub" data-en="View on GitHub">Ver en GitHub</span></a>
+      </div>
+      <div class="hero-score">
+        <div class="score-item"><span class="score-num">353g</span><span class="score-label" data-es="Masa total" data-en="Total mass">Masa total</span></div>
+        <div class="score-sep">·</div>
+        <div class="score-item"><span class="score-num">1.1m</span><span class="score-label" data-es="Distancia prueba" data-en="Test distance">Distancia prueba</span></div>
+        <div class="score-sep">·</div>
+        <div class="score-item"><span class="score-num">5</span><span class="score-label" data-es="Superficies" data-en="Surfaces">Superficies</span></div>
+        <div class="score-sep">·</div>
+        <div class="score-item"><span class="score-num">100</span><span class="score-label" data-es="Muestras Monte Carlo" data-en="Monte Carlo samples">Muestras Monte Carlo</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+
+    <!-- GALERIA -->
+    <section class="section gallery-section" data-animate>
+      <h2 class="section-title" data-es="🤖 El robot" data-en="🤖 The robot">🤖 El robot</h2>
+      <div class="gallery">
+        <div class="gallery-item main-img">
+          <img src="Robot.jpeg" alt="Robot físico con sensores ultrasónicos" />
+          <div class="img-caption" data-es="Prototipo físico con sensores HC-SR04 y control vía tablet" data-en="Physical prototype with HC-SR04 sensors and tablet control">Prototipo físico con sensores HC-SR04 y control vía tablet</div>
+        </div>
+        <div class="gallery-item">
+          <img src="Robot3D.jpeg" alt="Diseño 3D del robot" />
+          <div class="img-caption" data-es="Diseño 3D en CAD — vista explosionada del chasis" data-en="3D CAD design — exploded chassis view">Diseño 3D en CAD — vista explosionada del chasis</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESCRIPCION -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="📋 Descripción general" data-en="📋 Overview">📋 Descripción general</h2>
+      <div class="prose">
+        <p data-es="Este proyecto desarrolla un agente robótico capaz de desplazarse y ejecutar acciones de fútbol (patear/recuperar un balón) en distintas superficies. Fue diseñado, construido y evaluado como parte de un informe experimental en la Universidad Sergio Arboleda."
+           data-en="This project develops a robotic agent capable of moving and executing football actions (kicking/recovering a ball) on different surfaces. It was designed, built and evaluated as part of an experimental report at Universidad Sergio Arboleda.">
+          Este proyecto desarrolla un agente robótico capaz de desplazarse y ejecutar acciones de fútbol (patear/recuperar un balón) en distintas superficies. Fue diseñado, construido y evaluado como parte de un informe experimental en la Universidad Sergio Arboleda.
+        </p>
+        <p data-es="La estructura física fue construida en MDF con diseño cilíndrico. El sistema electrónico se basa en un ESP32 que recibe comandos de movimiento por Bluetooth clásico desde una app móvil. Tres sensores ultrasónicos HC-SR04 detectan obstáculos en el frente y los laterales, mientras que un sensor de color TCS34725 permite identificar el balón."
+           data-en="The physical structure was built in MDF with a cylindrical design. The electronic system is based on an ESP32 that receives movement commands via classic Bluetooth from a mobile app. Three HC-SR04 ultrasonic sensors detect obstacles at the front and sides, while a TCS34725 color sensor allows ball identification.">
+          La estructura física fue construida en MDF con diseño cilíndrico. El sistema electrónico se basa en un ESP32 que recibe comandos de movimiento por Bluetooth clásico desde una app móvil. Tres sensores ultrasónicos HC-SR04 detectan obstáculos en el frente y los laterales, mientras que un sensor de color TCS34725 permite identificar el balón.
+        </p>
+      </div>
+    </section>
+
+    <!-- COMPONENTES -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="⚡ Componentes electrónicos" data-en="⚡ Electronic Components">⚡ Componentes electrónicos</h2>
+      <div class="components-grid">
+        <div class="comp-card">
+          <div class="comp-icon">🧠</div>
+          <div class="comp-name">ESP32</div>
+          <div class="comp-desc" data-es="Microcontrolador principal. Gestiona Bluetooth, PWM de motores y lectura de sensores." data-en="Main microcontroller. Manages Bluetooth, motor PWM and sensor reading.">Microcontrolador principal. Gestiona Bluetooth, PWM de motores y lectura de sensores.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">📡</div>
+          <div class="comp-name">HC-SR04 ×3</div>
+          <div class="comp-desc" data-es="Sensores ultrasónicos para detección de obstáculos y del balón en frente y laterales." data-en="Ultrasonic sensors for obstacle and ball detection at front and sides.">Sensores ultrasónicos para detección de obstáculos y del balón en frente y laterales.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">🎨</div>
+          <div class="comp-name">TCS34725</div>
+          <div class="comp-desc" data-es="Sensor de color RGB para identificación del balón por su color en campo." data-en="RGB color sensor for ball identification by color on the field.">Sensor de color RGB para identificación del balón por su color en campo.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">⚙️</div>
+          <div class="comp-name">Motores DC ×2</div>
+          <div class="comp-desc" data-es="Motores de corriente directa con control de velocidad PWM y dirección independiente." data-en="Direct current motors with PWM speed control and independent direction.">Motores de corriente directa con control de velocidad PWM y dirección independiente.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">🔌</div>
+          <div class="comp-name">TB6612FNG</div>
+          <div class="comp-desc" data-es="Driver dual de motores. Controla AIN1/AIN2/PWMA y BIN1/BIN2/PWMB desde el ESP32." data-en="Dual motor driver. Controls AIN1/AIN2/PWMA and BIN1/BIN2/PWMB from the ESP32.">Driver dual de motores. Controla AIN1/AIN2/PWMA y BIN1/BIN2/PWMB desde el ESP32.</div>
+        </div>
+        <div class="comp-card">
+          <div class="comp-icon">📱</div>
+          <div class="comp-name">Bluetooth Serial</div>
+          <div class="comp-desc" data-es="Comunicación inalámbrica vía BluetoothSerial. El robot se registra como 'RobotFutbol_ESP32'." data-en="Wireless communication via BluetoothSerial. The robot registers as 'RobotFutbol_ESP32'.">Comunicación inalámbrica vía BluetoothSerial. El robot se registra como 'RobotFutbol_ESP32'.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CODIGO -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="💻 Lógica de control (Arduino)" data-en="💻 Control Logic (Arduino)">💻 Lógica de control (Arduino)</h2>
+      <div class="prose">
+        <p data-es="El firmware corre sobre ESP32 con la librería <code>BluetoothSerial</code>. El loop principal escucha caracteres Bluetooth y despacha las funciones de movimiento correspondientes:" data-en="The firmware runs on ESP32 with the <code>BluetoothSerial</code> library. The main loop listens for Bluetooth characters and dispatches the corresponding movement functions:">
+          El firmware corre sobre ESP32 con la librería <code>BluetoothSerial</code>. El loop principal escucha caracteres Bluetooth y despacha las funciones de movimiento correspondientes:
+        </p>
+      </div>
+      <div class="cmd-table">
+        <div class="cmd-header">
+          <span data-es="Comando BT" data-en="BT Command">Comando BT</span>
+          <span data-es="Acción" data-en="Action">Acción</span>
+          <span data-es="Pines activados" data-en="Activated pins">Pines activados</span>
+        </div>
+        <div class="cmd-row"><code>F / f</code><span data-es="Adelante" data-en="Forward">Adelante</span><code>AIN2↑ BIN2↑ PWM=200</code></div>
+        <div class="cmd-row"><code>B / b</code><span data-es="Atrás" data-en="Backward">Atrás</span><code>AIN1↑ BIN1↑ PWM=200</code></div>
+        <div class="cmd-row"><code>L / l</code><span data-es="Izquierda" data-en="Left">Izquierda</span><code>AIN1↑ BIN2↑</code></div>
+        <div class="cmd-row"><code>R / r</code><span data-es="Derecha" data-en="Right">Derecha</span><code>AIN2↑ BIN1↑</code></div>
+        <div class="cmd-row cmd-stop"><code>S / s</code><span data-es="Parar" data-en="Stop">Parar</span><code>PWM=0</code></div>
+      </div>
+      <div class="callout">
+        <span class="ci">⚡</span>
+        <span data-es="La velocidad base está definida como constante <code>VELOCIDAD = 200</code> (rango 0–255 PWM). El pin <code>STBY = HIGH</code> mantiene activo el driver TB6612FNG en todo momento."
+              data-en="The base speed is defined as constant <code>VELOCIDAD = 200</code> (range 0–255 PWM). Pin <code>STBY = HIGH</code> keeps the TB6612FNG driver active at all times.">
+          La velocidad base está definida como constante <code>VELOCIDAD = 200</code> (rango 0–255 PWM). El pin <code>STBY = HIGH</code> mantiene activo el driver TB6612FNG en todo momento.
+        </span>
+      </div>
+    </section>
+
+    <!-- ANALISIS ESTADISTICO -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="📊 Análisis estadístico de rendimiento" data-en="📊 Statistical Performance Analysis">📊 Análisis estadístico de rendimiento</h2>
+      <div class="prose">
+        <p data-es="El informe experimental evaluó el robot en 5 superficies distintas para dos tareas: desplazamiento y acción de fútbol. Se aplicaron métodos estadísticos avanzados para modelar el rendimiento:"
+           data-en="The experimental report evaluated the robot on 5 different surfaces for two tasks: displacement and football action. Advanced statistical methods were applied to model performance:">
+          El informe experimental evaluó el robot en 5 superficies distintas para dos tareas: desplazamiento y acción de fútbol. Se aplicaron métodos estadísticos avanzados para modelar el rendimiento:
+        </p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="stat-icon">🎲</div>
+          <h4 data-es="Simulación Monte Carlo" data-en="Monte Carlo Simulation">Simulación Monte Carlo</h4>
+          <p data-es="100 muestras por escenario generadas con coeficientes de variación asumidos. Se estimaron medias, desviaciones estándar e intervalos de confianza al 95%." data-en="100 samples per scenario generated with assumed variation coefficients. Means, standard deviations and 95% confidence intervals were estimated.">100 muestras por escenario generadas con coeficientes de variación asumidos. Se estimaron medias, desviaciones estándar e intervalos de confianza al 95%.</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📐</div>
+          <h4 data-es="Distribución Binomial" data-en="Binomial Distribution">Distribución Binomial</h4>
+          <p data-es="Modelado de éxito de tareas con distribuciones de Bernoulli/Binomial para estimar probabilidades de éxito por superficie." data-en="Task success modeled with Bernoulli/Binomial distributions to estimate success probabilities per surface.">Modelado de éxito de tareas con distribuciones de Bernoulli/Binomial para estimar probabilidades de éxito por superficie.</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">🧮</div>
+          <h4 data-es="Teorema de Bayes" data-en="Bayes' Theorem">Teorema de Bayes</h4>
+          <p data-es="Cálculo de probabilidades condicionales: probabilidad de éxito de una jugada dado que el robot recuperó el balón previamente." data-en="Conditional probability calculation: probability of a successful play given the robot previously recovered the ball.">Cálculo de probabilidades condicionales: probabilidad de éxito de una jugada dado que el robot recuperó el balón previamente.</p>
+        </div>
+        <div class="stat-card">
+          <div class="stat-icon">📈</div>
+          <h4 data-es="Distribución de Poisson" data-en="Poisson Distribution">Distribución de Poisson</h4>
+          <p data-es="Estimación de la tasa de recuperaciones por minuto de partido. Modelado de eventos discretos en tiempo continuo." data-en="Estimation of ball recovery rate per match minute. Discrete event modeling in continuous time.">Estimación de la tasa de recuperaciones por minuto de partido. Modelado de eventos discretos en tiempo continuo.</p>
+        </div>
+      </div>
+      <div class="surface-table">
+        <div class="surface-header">
+          <span data-es="Superficie" data-en="Surface">Superficie</span>
+          <span data-es="Rendimiento" data-en="Performance">Rendimiento</span>
+          <span data-es="Observación" data-en="Observation">Observación</span>
+        </div>
+        <div class="surface-row"><span>🟢 <span data-es="Lisa" data-en="Smooth">Lisa</span></span><div class="perf-bar"><div class="perf-fill" style="width:90%"></div></div><span data-es="Óptimo — mayor estabilidad" data-en="Optimal — highest stability">Óptimo — mayor estabilidad</span></div>
+        <div class="surface-row"><span>🟡 <span data-es="Madera" data-en="Wood">Madera</span></span><div class="perf-bar"><div class="perf-fill" style="width:75%"></div></div><span data-es="Bueno — leve variabilidad" data-en="Good — slight variability">Bueno — leve variabilidad</span></div>
+        <div class="surface-row"><span>🟠 <span data-es="Irregular" data-en="Irregular">Irregular</span></span><div class="perf-bar"><div class="perf-fill perf-med" style="width:50%"></div></div><span data-es="Moderado — inestabilidad media" data-en="Moderate — medium instability">Moderado — inestabilidad media</span></div>
+        <div class="surface-row"><span>🔴 <span data-es="Pasto" data-en="Grass">Pasto</span></span><div class="perf-bar"><div class="perf-fill perf-low" style="width:35%"></div></div><span data-es="Bajo — alta variabilidad y detenciones" data-en="Low — high variability and stops">Bajo — alta variabilidad y detenciones</span></div>
+        <div class="surface-row"><span>🔴 <span data-es="Gravilla" data-en="Gravel">Gravilla</span></span><div class="perf-bar"><div class="perf-fill perf-low" style="width:25%"></div></div><span data-es="Crítico — tracción deficiente" data-en="Critical — poor traction">Crítico — tracción deficiente</span></div>
+      </div>
+    </section>
+
+    <!-- PDF -->
+    <section class="section" id="section-pdf" data-animate>
+      <h2 class="section-title" data-es="📄 Informe experimental" data-en="📄 Experimental Report">📄 Informe experimental</h2>
+      <div class="pdf-block">
+        <div class="pdf-info">
+          <span class="pdf-icon">📄</span>
+          <div>
+            <div class="pdf-name">Robot.pdf</div>
+            <div class="pdf-desc" data-es="Informe completo con análisis estadístico, datos de prueba y conclusiones — Universidad Sergio Arboleda" data-en="Full report with statistical analysis, test data and conclusions — Universidad Sergio Arboleda">Informe completo con análisis estadístico, datos de prueba y conclusiones — Universidad Sergio Arboleda</div>
+          </div>
+        </div>
+        <a href="Robot.pdf" target="_blank" class="btn-download">⬇ <span data-es="Descargar PDF" data-en="Download PDF">Descargar PDF</span></a>
+      </div>
+      <div class="pdf-viewer">
+        <iframe src="Robot.pdf" title="Robot Informe PDF"></iframe>
+      </div>
+    </section>
+
+    <!-- TECNOLOGIAS -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="🛠️ Tecnologías y herramientas" data-en="🛠️ Technologies & Tools">🛠️ Tecnologías y herramientas</h2>
+      <div class="tech-tags">
+        <span class="tech-tag tag-blue">ESP32</span>
+        <span class="tech-tag tag-orange">Arduino C++</span>
+        <span class="tech-tag tag-blue">BluetoothSerial</span>
+        <span class="tech-tag tag-gray">HC-SR04</span>
+        <span class="tech-tag tag-gray">TCS34725</span>
+        <span class="tech-tag tag-gray">TB6612FNG</span>
+        <span class="tech-tag tag-green">PWM Motor Control</span>
+        <span class="tech-tag tag-purple">Monte Carlo</span>
+        <span class="tech-tag tag-purple">Estadística aplicada</span>
+        <span class="tech-tag tag-orange">CAD 3D</span>
+        <span class="tech-tag tag-wood">MDF Láser</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-ball">⚽</div>
+    <span>© 2025 Cristian Leon &nbsp;·&nbsp;</span>
+    <a href="../../index.html">← <span data-es="Volver al portafolio" data-en="Back to portfolio">Volver al portafolio</span></a>
+  </footer>
+
+  <script src="Robot.js"></script>
+</body>
+</html>

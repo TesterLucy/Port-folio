@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PELE — Lenguaje de Programación para Deep Learning</title>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="Lenguaje.css"/>
+</head>
+<body>
+
+  <nav class="topbar">
+    <a href="../../index.html" class="back-btn">← <span data-es="Volver al portafolio" data-en="Back to portfolio">Volver al portafolio</span></a>
+    <div class="topbar-right">
+      <span class="breadcrumb">~/proyectos/<span class="bc-accent">PELE</span></span>
+      <div class="lang-switch">
+        <button class="lang-btn active" onclick="setLang('es')">ES</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- TERMINAL HERO -->
+  <header class="hero">
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="terminal-window">
+        <div class="terminal-bar">
+          <span class="t-dot td-red"></span>
+          <span class="t-dot td-yellow"></span>
+          <span class="t-dot td-green"></span>
+          <span class="t-title">pele.py — bash</span>
+        </div>
+        <div class="terminal-body">
+          <div class="t-line"><span class="t-prompt">$</span> python3 pele.py</div>
+          <div class="t-line t-out"><span class="t-green">▶</span> <span data-es="Cargando librerías nativas..." data-en="Loading native libraries...">Cargando librerías nativas...</span></div>
+          <div class="t-line t-out"><span class="t-green">✓</span> pele_math · pele_numpy · pele_tensor · pele_pandas</div>
+          <div class="t-line t-out"><span class="t-green">✓</span> pele_ml · pele_nn · pele_metrics · pele_losses</div>
+          <div class="t-line t-out"><span class="t-green">✓</span> pele_structs · pele_data · pele_random · pele_plot</div>
+          <div class="t-line t-out t-cyan"><span data-es="══ PELE v1.0 — Listo. 13 librerías activas ══" data-en="══ PELE v1.0 — Ready. 13 active libraries ══">══ PELE v1.0 — Listo. 13 librerías activas ══</span></div>
+          <div class="t-line"><span class="t-prompt">$</span> <span class="t-cursor">_</span></div>
+        </div>
+      </div>
+      <div class="hero-content">
+        <div class="hero-badge" data-es="🧠 Lenguaje Propio · ANTLR4 · Deep Learning · Universidad Sergio Arboleda" data-en="🧠 Custom Language · ANTLR4 · Deep Learning · Universidad Sergio Arboleda">🧠 Lenguaje Propio · ANTLR4 · Deep Learning · Universidad Sergio Arboleda</div>
+        <h1><span class="h1-lang" data-es="LENGUAJE DE" data-en="PROGRAMMING">LENGUAJE DE</span><br/><span class="h1-name">PELE</span></h1>
+        <p class="hero-sub"
+           data-es="Un lenguaje de programación funcional puro construido desde cero con ANTLR4. Diseñado íntegramente para Machine Learning y Deep Learning — con su propio ecosistema de 13 librerías nativas que no dependen de Python para su lógica."
+           data-en="A pure functional programming language built from scratch with ANTLR4. Designed entirely for Machine Learning and Deep Learning — with its own ecosystem of 13 native libraries that do not depend on Python for their logic.">
+          Un lenguaje de programación funcional puro construido desde cero con ANTLR4. Diseñado íntegramente para Machine Learning y Deep Learning — con su propio ecosistema de 13 librerías nativas que no dependen de Python para su lógica.
+        </p>
+        <div class="hero-links">
+          <a href="https://github.com/Cristox1/PELE" target="_blank" class="btn-primary">⌥ <span data-es="Ver en GitHub" data-en="View on GitHub">Ver en GitHub</span></a>
+        </div>
+        <div class="hero-stats">
+          <div class="hs"><span class="hs-n">13</span><span class="hs-l" data-es="Librerías .pele" data-en=".pele Libraries">Librerías .pele</span></div>
+          <div class="hs-sep">//</div>
+          <div class="hs"><span class="hs-n">4</span><span class="hs-l" data-es="Fases de desarrollo" data-en="Dev phases">Fases de desarrollo</span></div>
+          <div class="hs-sep">//</div>
+          <div class="hs"><span class="hs-n">0</span><span class="hs-l" data-es="Deps externas en lógica" data-en="External logic deps">Deps externas en lógica</span></div>
+          <div class="hs-sep">//</div>
+          <div class="hs"><span class="hs-n">ANTLR4</span><span class="hs-l" data-es="Motor del lenguaje" data-en="Language engine">Motor del lenguaje</span></div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+
+    <!-- QUE ES PELE -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="// ¿Qué es PELE?" data-en="// What is PELE?">// ¿Qué es PELE?</h2>
+      <div class="two-col">
+        <div class="prose">
+          <p data-es="PELE es un lenguaje de programación de paradigma <strong>funcional puro</strong>, construido desde cero con la herramienta <strong>ANTLR4</strong> para el análisis léxico y sintáctico. Python actúa únicamente como máquina virtual de bajo nivel (evaluador del AST), sin contener ninguna lógica de negocio."
+             data-en="PELE is a <strong>pure functional</strong> programming language built from scratch with <strong>ANTLR4</strong> for lexical and syntactic analysis. Python acts solely as a low-level virtual machine (AST evaluator), containing no business logic whatsoever.">
+            PELE es un lenguaje de programación de paradigma <strong>funcional puro</strong>, construido desde cero con la herramienta <strong>ANTLR4</strong> para el análisis léxico y sintáctico. Python actúa únicamente como máquina virtual de bajo nivel (evaluador del AST), sin contener ninguna lógica de negocio.
+          </p>
+          <p data-es="La <strong>regla de oro</strong> del proyecto: todo el ecosistema matemático, estructural y predictivo está escrito de forma nativa en archivos <code>.pele</code> bajo abstracciones funcionales puras. Esto incluye redes neuronales, algoritmos de clustering, árboles de decisión, métricas de evaluación y gráficos vectoriales."
+             data-en="The project's <strong>golden rule</strong>: the entire mathematical, structural and predictive ecosystem is natively written in <code>.pele</code> files under pure functional abstractions. This includes neural networks, clustering algorithms, decision trees, evaluation metrics and vector graphics.">
+            La <strong>regla de oro</strong> del proyecto: todo el ecosistema matemático, estructural y predictivo está escrito de forma nativa en archivos <code>.pele</code> bajo abstracciones funcionales puras. Esto incluye redes neuronales, algoritmos de clustering, árboles de decisión, métricas de evaluación y gráficos vectoriales.
+          </p>
+        </div>
+        <div class="rule-box">
+          <div class="rule-title">⚡ <span data-es="Regla de oro" data-en="Golden Rule">Regla de oro</span></div>
+          <div class="rule-body">
+            <div class="rule-item ri-yes">✓ <span data-es="Lógica ML/DL → escrita en <code>.pele</code>" data-en="ML/DL logic → written in <code>.pele</code>">Lógica ML/DL → escrita en <code>.pele</code></span></div>
+            <div class="rule-item ri-yes">✓ <span data-es="Estructuras de datos → nativas en PELE" data-en="Data structures → native in PELE">Estructuras de datos → nativas en PELE</span></div>
+            <div class="rule-item ri-yes">✓ <span data-es="Matemáticas → funciones propias del lenguaje" data-en="Math → language-own functions">Matemáticas → funciones propias del lenguaje</span></div>
+            <div class="rule-item ri-no">✗ <span data-es="Python → solo evaluador AST, sin lógica" data-en="Python → AST evaluator only, no logic">Python → solo evaluador AST, sin lógica</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARQUITECTURA -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="// Arquitectura del intérprete" data-en="// Interpreter Architecture">// Arquitectura del intérprete</h2>
+      <div class="pipeline">
+        <div class="pipe-step">
+          <div class="pipe-icon">📝</div>
+          <div class="pipe-name" data-es="Código fuente" data-en="Source code">Código fuente</div>
+          <div class="pipe-ext">.pele / programa.txt</div>
+          <div class="pipe-desc" data-es="Archivo de entrada con sintaxis PELE funcional" data-en="Input file with functional PELE syntax">Archivo de entrada con sintaxis PELE funcional</div>
+        </div>
+        <div class="pipe-arrow">→</div>
+        <div class="pipe-step">
+          <div class="pipe-icon">⚙️</div>
+          <div class="pipe-name">Lexer / Parser</div>
+          <div class="pipe-ext">PELE.g4 → ANTLR4</div>
+          <div class="pipe-desc" data-es="Gramática formal: precedencia matemática, operadores, scopes y tuberías lógicas" data-en="Formal grammar: math precedence, operators, scopes and logical pipelines">Gramática formal: precedencia matemática, operadores, scopes y tuberías lógicas</div>
+        </div>
+        <div class="pipe-arrow">→</div>
+        <div class="pipe-step ps-highlight">
+          <div class="pipe-icon">🌲</div>
+          <div class="pipe-name">AST Visitor</div>
+          <div class="pipe-ext">visitorPELE.py</div>
+          <div class="pipe-desc" data-es="Evaluador semántico puro. No contiene lógica de librerías — solo recorre y evalúa el árbol" data-en="Pure semantic evaluator. No library logic — only traverses and evaluates the tree">Evaluador semántico puro. No contiene lógica de librerías — solo recorre y evalúa el árbol</div>
+        </div>
+        <div class="pipe-arrow">→</div>
+        <div class="pipe-step">
+          <div class="pipe-icon">📦</div>
+          <div class="pipe-name" data-es="Preludio de librerías" data-en="Library prelude">Preludio de librerías</div>
+          <div class="pipe-ext">pele.py</div>
+          <div class="pipe-desc" data-es="Inyecta las 13 librerías nativas en orden de dependencias antes de ejecutar el programa" data-en="Injects 13 native libraries in dependency order before running the program">Inyecta las 13 librerías nativas en orden de dependencias antes de ejecutar el programa</div>
+        </div>
+        <div class="pipe-arrow">→</div>
+        <div class="pipe-step">
+          <div class="pipe-icon">📊</div>
+          <div class="pipe-name" data-es="Salida" data-en="Output">Salida</div>
+          <div class="pipe-ext">Console + .svg</div>
+          <div class="pipe-desc" data-es="Resultados, métricas, matrices de confusión y gráficos vectoriales SVG" data-en="Results, metrics, confusion matrices and SVG vector charts">Resultados, métricas, matrices de confusión y gráficos vectoriales SVG</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIBRERIAS NATIVAS -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="// Ecosistema de librerías nativas (.pele)" data-en="// Native Library Ecosystem (.pele)">// Ecosistema de librerías nativas (.pele)</h2>
+      <div class="libs-grid">
+
+        <div class="lib-card lc-math">
+          <div class="lib-file">pele_math.pele</div>
+          <div class="lib-cat" data-es="Matemáticas base" data-en="Core math">Matemáticas base</div>
+          <div class="lib-desc" data-es="Potencia, exp, log, min, max, abs. Funciones de activación: Sigmoide y ReLU nativos." data-en="Power, exp, log, min, max, abs. Activation functions: native Sigmoid and ReLU.">Potencia, exp, log, min, max, abs. Funciones de activación: Sigmoide y ReLU nativos.</div>
+          <div class="lib-fns"><code>pow</code> <code>sigmoid</code> <code>relu</code> <code>exp</code></div>
+        </div>
+
+        <div class="lib-card lc-tensor">
+          <div class="lib-file">pele_numpy.pele</div>
+          <div class="lib-cat" data-es="Álgebra lineal" data-en="Linear algebra">Álgebra lineal</div>
+          <div class="lib-desc" data-es="Arrays NumPy nativos, transposición, suma, resta, producto escalar y matmul 2D." data-en="Native NumPy arrays, transpose, sum, sub, dot product and 2D matmul.">Arrays NumPy nativos, transposición, suma, resta, producto escalar y matmul 2D.</div>
+          <div class="lib-fns"><code>np_array</code> <code>np_matmul</code> <code>np_shape</code></div>
+        </div>
+
+        <div class="lib-card lc-tensor">
+          <div class="lib-file">pele_tensor.pele</div>
+          <div class="lib-cat" data-es="Tensores" data-en="Tensors">Tensores</div>
+          <div class="lib-desc" data-es="Estructura base para el flujo de gradientes y cómputo diferenciable de tensores multidimensionales." data-en="Base structure for gradient flow and differentiable computation of multidimensional tensors.">Estructura base para el flujo de gradientes y cómputo diferenciable de tensores multidimensionales.</div>
+          <div class="lib-fns"><code>tensor</code> <code>grad_flow</code></div>
+        </div>
+
+        <div class="lib-card lc-data">
+          <div class="lib-file">pele_pandas.pele</div>
+          <div class="lib-cat" data-es="Data Wrangling / ETL" data-en="Data Wrangling / ETL">Data Wrangling / ETL</div>
+          <div class="lib-desc" data-es="Parseo CSV dinámico, inferencia de tipos, One-Hot Encoding, fill_na, proyección y eliminación de columnas." data-en="Dynamic CSV parsing, type inference, One-Hot Encoding, fill_na, column projection and deletion.">Parseo CSV dinámico, inferencia de tipos, One-Hot Encoding, fill_na, proyección y eliminación de columnas.</div>
+          <div class="lib-fns"><code>pd_read_csv</code> <code>pd_one_hot_encode</code> <code>pd_fill_na</code></div>
+        </div>
+
+        <div class="lib-card lc-ml">
+          <div class="lib-file">pele_ml.pele</div>
+          <div class="lib-cat" data-es="Modelos ML clásicos" data-en="Classic ML Models">Modelos ML clásicos</div>
+          <div class="lib-desc" data-es="Perceptrón de Rosenblatt, Regresión Lineal (SGD), K-Nearest Neighbors (Euclidiana) y K-Means Clustering." data-en="Rosenblatt Perceptron, Linear Regression (SGD), K-Nearest Neighbors (Euclidean) and K-Means Clustering.">Perceptrón de Rosenblatt, Regresión Lineal (SGD), K-Nearest Neighbors (Euclidiana) y K-Means Clustering.</div>
+          <div class="lib-fns"><code>perceptron</code> <code>knn</code> <code>kmeans</code> <code>linear_reg</code></div>
+        </div>
+
+        <div class="lib-card lc-nn">
+          <div class="lib-file">pele_nn.pele</div>
+          <div class="lib-cat" data-es="Redes Neuronales" data-en="Neural Networks">Redes Neuronales</div>
+          <div class="lib-desc" data-es="Inicialización de capas (pesos + sesgos) y propagación hacia adelante (forward pass) de redes artificiales." data-en="Layer initialization (weights + biases) and forward pass of artificial neural networks.">Inicialización de capas (pesos + sesgos) y propagación hacia adelante (forward pass) de redes artificiales.</div>
+          <div class="lib-fns"><code>init_layer</code> <code>forward</code></div>
+        </div>
+
+        <div class="lib-card lc-metrics">
+          <div class="lib-file">pele_metrics.pele</div>
+          <div class="lib-cat" data-es="Métricas de evaluación" data-en="Evaluation Metrics">Métricas de evaluación</div>
+          <div class="lib-desc" data-es="Accuracy, Precisión, Recall, F1-Score. Matriz de confusión multiclase 2D. Coeficiente R² para regresión." data-en="Accuracy, Precision, Recall, F1-Score. 2D multiclass confusion matrix. R² coefficient for regression.">Accuracy, Precisión, Recall, F1-Score. Matriz de confusión multiclase 2D. Coeficiente R² para regresión.</div>
+          <div class="lib-fns"><code>precision</code> <code>recall</code> <code>f1</code> <code>confusion_matrix</code> <code>r2</code></div>
+        </div>
+
+        <div class="lib-card lc-losses">
+          <div class="lib-file">pele_losses.pele</div>
+          <div class="lib-cat" data-es="Funciones de pérdida" data-en="Loss Functions">Funciones de pérdida</div>
+          <div class="lib-desc" data-es="Entropía cruzada binaria (BCE) y Error Cuadrático Medio (MSE) implementados nativamente en PELE." data-en="Binary Cross-Entropy (BCE) and Mean Squared Error (MSE) natively implemented in PELE.">Entropía cruzada binaria (BCE) y Error Cuadrático Medio (MSE) implementados nativamente en PELE.</div>
+          <div class="lib-fns"><code>bce_loss</code> <code>mse_loss</code></div>
+        </div>
+
+        <div class="lib-card lc-data">
+          <div class="lib-file">pele_data.pele</div>
+          <div class="lib-cat" data-es="Preprocesamiento" data-en="Preprocessing">Preprocesamiento</div>
+          <div class="lib-desc" data-es="Normalización Min-Max y estandarización Z-score para preparar features antes del entrenamiento." data-en="Min-Max normalization and Z-score standardization to prepare features before training.">Normalización Min-Max y estandarización Z-score para preparar features antes del entrenamiento.</div>
+          <div class="lib-fns"><code>min_max</code> <code>z_score</code></div>
+        </div>
+
+        <div class="lib-card lc-math">
+          <div class="lib-file">pele_random.pele</div>
+          <div class="lib-cat" data-es="Aleatoriedad reproducible" data-en="Reproducible randomness">Aleatoriedad reproducible</div>
+          <div class="lib-desc" data-es="Generador pseudoaleatorio LCG (Linear Congruential Generator) nativo. Semilla fija para reproducibilidad de modelos." data-en="Native LCG (Linear Congruential Generator). Fixed seed for model reproducibility.">Generador pseudoaleatorio LCG (Linear Congruential Generator) nativo. Semilla fija para reproducibilidad de modelos.</div>
+          <div class="lib-fns"><code>lcg_rand</code> <code>seed</code></div>
+        </div>
+
+        <div class="lib-card lc-struct">
+          <div class="lib-file">pele_structs.pele</div>
+          <div class="lib-cat" data-es="Estructuras de datos" data-en="Data Structures">Estructuras de datos</div>
+          <div class="lib-desc" data-es="Pilas, colas, conjuntos inmutables, árboles con preorden/inorden y grafos con BFS/DFS recursivos." data-en="Stacks, queues, immutable sets, trees with pre/inorder traversal and graphs with recursive BFS/DFS.">Pilas, colas, conjuntos inmutables, árboles con preorden/inorden y grafos con BFS/DFS recursivos.</div>
+          <div class="lib-fns"><code>push</code> <code>pop</code> <code>bfs</code> <code>dfs</code> <code>tree</code></div>
+        </div>
+
+        <div class="lib-card lc-plot">
+          <div class="lib-file">pele_plot.pele</div>
+          <div class="lib-cat" data-es="Visualización SVG" data-en="SVG Visualization">Visualización SVG</div>
+          <div class="lib-desc" data-es="Generación directa de curvas de aprendizaje y scatter plots como archivos vectoriales SVG sin dependencias." data-en="Direct generation of learning curves and scatter plots as SVG vector files without dependencies.">Generación directa de curvas de aprendizaje y scatter plots como archivos vectoriales SVG sin dependencias.</div>
+          <div class="lib-fns"><code>scatter_plot</code> <code>learning_curve</code></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- EJEMPLO DE CODIGO -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="// Ejemplo — Flujo ML completo en PELE" data-en="// Example — Full ML pipeline in PELE">// Ejemplo — Flujo ML completo en PELE</h2>
+      <div class="code-window">
+        <div class="code-bar">
+          <span class="c-dot cd-r"></span><span class="c-dot cd-y"></span><span class="c-dot cd-g"></span>
+          <span class="c-file">programa.pele</span>
+          <span class="c-badge">PELE</span>
+        </div>
+        <pre class="code-block"><code><span class="c-comment">// 1. Cargar dataset CSV</span>
+csv_txt = <span class="c-str">"edad,salario,compra,categoria\n25,40000.0,0,Premium\n32,54000.0,1,Standard\n"</span>;
+df = <span class="c-fn">pd_read_csv</span>(csv_txt);
+
+<span class="c-comment">// 2. Codificación One-Hot de variable categórica</span>
+df_enc = <span class="c-fn">pd_one_hot_encode</span>(df, <span class="c-str">"categoria"</span>);
+
+<span class="c-comment">// 3. Selección de features y target</span>
+X = <span class="c-fn">pd_select_columns</span>(df_enc, [<span class="c-str">"edad"</span>, <span class="c-str">"salario"</span>]);
+y = <span class="c-fn">pd_get_column</span>(df_enc, <span class="c-str">"compra"</span>);
+
+<span class="c-comment">// 4. Evaluar métricas del modelo</span>
+y_real = [<span class="c-num">1</span>, <span class="c-num">0</span>, <span class="c-num">1</span>, <span class="c-num">1</span>, <span class="c-num">0</span>, <span class="c-num">1</span>, <span class="c-num">0</span>, <span class="c-num">0</span>];
+y_pred = [<span class="c-num">1</span>, <span class="c-num">0</span>, <span class="c-num">1</span>, <span class="c-num">0</span>, <span class="c-num">0</span>, <span class="c-num">1</span>, <span class="c-num">1</span>, <span class="c-num">0</span>];
+
+<span class="c-fn">mostrar</span>(<span class="c-str">"Precision:"</span>);
+<span class="c-fn">mostrar</span>(<span class="c-fn">precision</span>(y_real, y_pred, <span class="c-num">1</span>));    <span class="c-comment">// → 0.75</span>
+
+<span class="c-fn">mostrar</span>(<span class="c-str">"Confusion Matrix:"</span>);
+<span class="c-fn">mostrar</span>(<span class="c-fn">confusion_matrix</span>(y_real, y_pred));  <span class="c-comment">// → [[3, 1], [1, 3]]</span>
+
+<span class="c-comment">// 5. Exportar curva de aprendizaje a SVG</span>
+<span class="c-fn">learning_curve</span>(losses, <span class="c-str">"curva_aprendizaje.svg"</span>);</code></pre>
+      </div>
+    </section>
+
+    <!-- FASES DE DESARROLLO -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="// Fases de desarrollo" data-en="// Development Phases">// Fases de desarrollo</h2>
+      <div class="phases">
+        <div class="phase">
+          <div class="phase-num">01</div>
+          <div class="phase-content">
+            <div class="phase-name" data-es="Sintaxis Base" data-en="Core Syntax">Sintaxis Base</div>
+            <div class="phase-desc" data-es="Control de flujo (<code>si</code>, <code>mientras</code>, <code>por</code>), funciones, scopes de memoria y recursividad completa." data-en="Control flow (<code>si</code>, <code>mientras</code>, <code>por</code>), functions, memory scopes and full recursion.">Control de flujo (<code>si</code>, <code>mientras</code>, <code>por</code>), funciones, scopes de memoria y recursividad completa.</div>
+          </div>
+        </div>
+        <div class="phase-connector"></div>
+        <div class="phase">
+          <div class="phase-num">02</div>
+          <div class="phase-content">
+            <div class="phase-name" data-es="Autonomía de Librerías" data-en="Library Autonomy">Autonomía de Librerías</div>
+            <div class="phase-desc" data-es="Remoción total de dependencias externas del visitor. Grafos, árboles y pilas reescritos nativamente en PELE." data-en="Full removal of external visitor dependencies. Graphs, trees and stacks rewritten natively in PELE.">Remoción total de dependencias externas del visitor. Grafos, árboles y pilas reescritos nativamente en PELE.</div>
+          </div>
+        </div>
+        <div class="phase-connector"></div>
+        <div class="phase">
+          <div class="phase-num">03</div>
+          <div class="phase-content">
+            <div class="phase-name" data-es="Corrección del Parser" data-en="Parser Correction">Corrección del Parser</div>
+            <div class="phase-desc" data-es="Reordenamiento de gramática ANTLR4 para corregir precedencia: desde acceso a índices hasta tuberías lógicas. Expresiones complejas como <code>tp + fp == 0</code> evaluadas correctamente." data-en="ANTLR4 grammar reordering to fix precedence: from index access to logical pipelines. Complex expressions like <code>tp + fp == 0</code> evaluated correctly.">Reordenamiento de gramática ANTLR4 para corregir precedencia: desde acceso a índices hasta tuberías lógicas. Expresiones complejas como <code>tp + fp == 0</code> evaluadas correctamente.</div>
+          </div>
+        </div>
+        <div class="phase-connector"></div>
+        <div class="phase">
+          <div class="phase-num">04</div>
+          <div class="phase-content">
+            <div class="phase-name" data-es="Data Science & Pandas" data-en="Data Science & Pandas">Data Science & Pandas</div>
+            <div class="phase-desc" data-es="Creación de <code>pele_pandas.pele</code> y suite de pruebas integradora <code>programa.txt</code>. 100% de tests pasando con dashboard visual en consola." data-en="Creation of <code>pele_pandas.pele</code> and integrating test suite <code>programa.txt</code>. 100% tests passing with console visual dashboard.">Creación de <code>pele_pandas.pele</code> y suite de pruebas integradora <code>programa.txt</code>. 100% de tests pasando con dashboard visual en consola.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CAPACIDADES CLAVE -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="// Capacidades clave" data-en="// Key Capabilities">// Capacidades clave</h2>
+      <div class="caps-grid">
+        <div class="cap-card">
+          <span class="cap-icon">🧠</span>
+          <div class="cap-title" data-es="Redes Neuronales" data-en="Neural Networks">Redes Neuronales</div>
+          <div class="cap-desc" data-es="Forward pass, inicialización de capas, funciones de activación Sigmoid y ReLU — sin NumPy ni TensorFlow." data-en="Forward pass, layer initialization, Sigmoid and ReLU activation — without NumPy or TensorFlow.">Forward pass, inicialización de capas, Sigmoid y ReLU — sin NumPy ni TensorFlow.</div>
+        </div>
+        <div class="cap-card">
+          <span class="cap-icon">📊</span>
+          <div class="cap-title" data-es="Clasificación & Clustering" data-en="Classification & Clustering">Clasificación & Clustering</div>
+          <div class="cap-desc" data-es="KNN con distancia Euclidiana, K-Means con centroides dinámicos, Perceptrón de Rosenblatt." data-en="KNN with Euclidean distance, K-Means with dynamic centroids, Rosenblatt Perceptron.">KNN con distancia Euclidiana, K-Means con centroides dinámicos, Perceptrón de Rosenblatt.</div>
+        </div>
+        <div class="cap-card">
+          <span class="cap-icon">🌲</span>
+          <div class="cap-title" data-es="Estructuras de Datos" data-en="Data Structures">Estructuras de Datos</div>
+          <div class="cap-desc" data-es="Grafos con BFS/DFS recursivos, árboles con preorden/inorden, pilas, colas y conjuntos inmutables funcionales." data-en="Graphs with recursive BFS/DFS, trees with pre/inorder, stacks, queues and functional immutable sets.">Grafos con BFS/DFS, árboles, pilas, colas y conjuntos funcionales.</div>
+        </div>
+        <div class="cap-card">
+          <span class="cap-icon">📈</span>
+          <div class="cap-title" data-es="Visualización SVG" data-en="SVG Visualization">Visualización SVG</div>
+          <div class="cap-desc" data-es="Genera curvas de aprendizaje y scatter plots como archivos .svg vectoriales directamente desde el lenguaje." data-en="Generates learning curves and scatter plots as .svg vector files directly from the language.">Genera curvas de aprendizaje y scatter plots como archivos .svg vectoriales.</div>
+        </div>
+        <div class="cap-card">
+          <span class="cap-icon">🔢</span>
+          <div class="cap-title" data-es="Métricas completas" data-en="Full Metrics">Métricas completas</div>
+          <div class="cap-desc" data-es="F1-Score, Precision, Recall, Accuracy, Matriz de Confusión multiclase y R² para regresión." data-en="F1-Score, Precision, Recall, Accuracy, multiclass Confusion Matrix and R² for regression.">F1-Score, Precision, Recall, Accuracy, Matriz de Confusión y R².</div>
+        </div>
+        <div class="cap-card">
+          <span class="cap-icon">🎲</span>
+          <div class="cap-title" data-es="Reproducibilidad" data-en="Reproducibility">Reproducibilidad</div>
+          <div class="cap-desc" data-es="Generador pseudoaleatorio LCG nativo con semilla fija — resultados reproducibles en cualquier ejecución." data-en="Native LCG pseudorandom generator with fixed seed — reproducible results across all executions.">Generador LCG nativo con semilla fija — resultados reproducibles siempre.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INSTALACION -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="// Instalación rápida" data-en="// Quick Setup">// Instalación rápida</h2>
+      <div class="install-steps">
+        <div class="inst-step">
+          <div class="inst-num">01</div>
+          <div class="inst-body">
+            <div class="inst-title" data-es="Clonar el repositorio" data-en="Clone the repository">Clonar el repositorio</div>
+            <div class="code-inline"><span class="t-prompt">$</span> git clone https://github.com/Cristox1/PELE.git && cd PELE</div>
+          </div>
+        </div>
+        <div class="inst-step">
+          <div class="inst-num">02</div>
+          <div class="inst-body">
+            <div class="inst-title" data-es="Crear entorno e instalar dependencias" data-en="Create env and install dependencies">Crear entorno e instalar dependencias</div>
+            <div class="code-inline"><span class="t-prompt">$</span> python3 -m venv env && source env/bin/activate<br/><span class="t-prompt">$</span> pip install antlr4-python3-runtime</div>
+          </div>
+        </div>
+        <div class="inst-step">
+          <div class="inst-num">03</div>
+          <div class="inst-body">
+            <div class="inst-title" data-es="Ejecutar el dashboard de pruebas" data-en="Run the test dashboard">Ejecutar el dashboard de pruebas</div>
+            <div class="code-inline"><span class="t-prompt">$</span> python3 pele.py</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="// Stack tecnológico" data-en="// Tech Stack">// Stack tecnológico</h2>
+      <div class="tech-tags">
+        <span class="tech-tag tt-green">ANTLR4</span>
+        <span class="tech-tag tt-blue">Python 3.x</span>
+        <span class="tech-tag tt-purple">Paradigma Funcional</span>
+        <span class="tech-tag tt-green">AST Evaluator</span>
+        <span class="tech-tag tt-cyan">Lexer / Parser</span>
+        <span class="tech-tag tt-cyan">Gramática formal .g4</span>
+        <span class="tech-tag tt-purple">MLP · KNN · K-Means</span>
+        <span class="tech-tag tt-purple">Regresión Lineal</span>
+        <span class="tech-tag tt-orange">Confusion Matrix</span>
+        <span class="tech-tag tt-orange">F1 · Precision · Recall · R²</span>
+        <span class="tech-tag tt-blue">SVG nativo</span>
+        <span class="tech-tag tt-green">LCG Pseudorandom</span>
+        <span class="tech-tag tt-gray">One-Hot Encoding</span>
+        <span class="tech-tag tt-gray">BFS / DFS recursivo</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-line"><span class="ft-prompt">$</span> <span class="ft-cmd" data-es="exit — volver al portafolio" data-en="exit — back to portfolio">exit — volver al portafolio</span></div>
+    <div class="footer-links">
+      <span>© 2025 Cristian Leon</span>
+      <span class="ft-sep">·</span>
+      <a href="https://github.com/Cristox1/PELE" target="_blank">GitHub ↗</a>
+      <span class="ft-sep">·</span>
+      <a href="../../index.html">← <span data-es="Portafolio" data-en="Portfolio">Portafolio</span></a>
+    </div>
+  </footer>
+
+  <script src="Lenguaje.js"></script>
+</body>
+</html>

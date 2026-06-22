@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cálculo de Notas Finales</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&family=Source+Code+Pro&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="NotaFinal.css"/>
+</head>
+<body>
+
+  <nav class="topbar">
+    <a href="../../index.html" class="back-btn">← <span data-es="Volver al portafolio" data-en="Back to portfolio">Volver al portafolio</span></a>
+    <div class="topbar-right">
+      <span class="breadcrumb" data-es="Proyectos / Cálculo de Notas Finales" data-en="Projects / Grade Calculator">Proyectos / Cálculo de Notas Finales</span>
+      <div class="lang-switch">
+        <button class="lang-btn active" onclick="setLang('es')">ES</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-badge" data-es="🎓 Proyecto Académico · Web App" data-en="🎓 Academic Project · Web App">🎓 Proyecto Académico · Web App</div>
+    <h1>
+      <span data-es="Calculadora de<br/>Notas Finales" data-en="Final Grade<br/>Calculator">Calculadora de<br/>Notas Finales</span>
+    </h1>
+    <p class="hero-subtitle" data-es="Herramienta educativa para calcular notas definitivas y detectar la nota mínima necesaria para aprobar cualquier asignatura universitaria." data-en="Educational tool to calculate final grades and detect the minimum grade needed to pass any university course.">
+      Herramienta educativa para calcular notas definitivas y detectar la nota mínima necesaria para aprobar cualquier asignatura universitaria.
+    </p>
+    <div class="hero-links">
+      <a href="https://calcularnotafinal.vercel.app/" target="_blank" class="btn-primary">🌐 <span data-es="Ver aplicación" data-en="View app">Ver aplicación</span></a>
+      <a href="https://github.com/TesterLucy/CalculoDeNotas" target="_blank" class="btn-outline">📂 <span data-es="Ver en GitHub" data-en="View on GitHub">Ver en GitHub</span></a>
+    </div>
+  </header>
+
+  <main class="content">
+
+    <div class="meta-grid">
+      <div class="meta-card">
+        <div class="meta-icon">📅</div>
+        <div class="meta-label" data-es="Año" data-en="Year">Año</div>
+        <div class="meta-value">2025</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-icon">🏫</div>
+        <div class="meta-label" data-es="Contexto" data-en="Context">Contexto</div>
+        <div class="meta-value">Universidad Sergio Arboleda</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-icon">📡</div>
+        <div class="meta-label" data-es="Deploy" data-en="Deploy">Deploy</div>
+        <div class="meta-value">Vercel</div>
+      </div>
+    </div>
+
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="Descripción general" data-en="Overview">Descripción general</h2>
+      <div class="prose">
+        <p data-es="Esta aplicación web surge de una necesidad real: estudiantes universitarios que, al avanzar en el semestre, necesitan saber exactamente qué nota deben obtener en los cortes restantes para aprobar una materia. El sistema académico colombiano divide el curso en cortes con porcentajes variables, lo que hace que el cálculo manual sea propenso a errores."
+           data-en="This web app was born from a real need: university students who, as the semester progresses, need to know exactly what grade they must achieve in the remaining periods to pass a course. The Colombian academic system divides courses into weighted grading periods, making manual calculation error-prone.">
+          Esta aplicación web surge de una necesidad real: estudiantes universitarios que, al avanzar en el semestre, necesitan saber exactamente qué nota deben obtener en los cortes restantes para aprobar una materia. El sistema académico colombiano divide el curso en cortes con porcentajes variables, lo que hace que el cálculo manual sea propenso a errores.
+        </p>
+        <p data-es="La herramienta ofrece dos modos de cálculo independientes: uno orientado a obtener la <strong>nota definitiva</strong> a partir de cortes ya cursados, y otro para proyectar la <strong>nota mínima requerida</strong> en los cortes pendientes. Ambos modos soportan estructuras académicas flexibles con cualquier número de cortes y porcentajes."
+           data-en="The tool offers two independent calculation modes: one to obtain the <strong>final grade</strong> from completed periods, and another to project the <strong>minimum required grade</strong> in pending ones. Both modes support flexible academic structures with any number of periods and percentages.">
+          La herramienta ofrece dos modos de cálculo independientes: uno orientado a obtener la <strong>nota definitiva</strong> a partir de cortes ya cursados, y otro para proyectar la <strong>nota mínima requerida</strong> en los cortes pendientes. Ambos modos soportan estructuras académicas flexibles con cualquier número de cortes y porcentajes.
+        </p>
+      </div>
+      <div class="callout">
+        <span class="ci">💡</span>
+        <span data-es="Desarrollada con HTML, CSS y JavaScript puro — sin dependencias externas. Totalmente responsiva y funcional en dispositivos móviles." data-en="Built with pure HTML, CSS and JavaScript — no external dependencies. Fully responsive and functional on mobile devices.">Desarrollada con HTML, CSS y JavaScript puro — sin dependencias externas. Totalmente responsiva y funcional en dispositivos móviles.</span>
+      </div>
+    </section>
+
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="Funcionalidades principales" data-en="Main Features">Funcionalidades principales</h2>
+      <ul class="feature-list">
+        <li>
+          <span class="fi">📊</span>
+          <span data-es="<strong>Modo Calcular Definitiva por Cortes:</strong> El usuario ingresa los cortes completados con su porcentaje y nota. Si los porcentajes no suman 100%, se calcula automáticamente la nota mínima necesaria en el porcentaje restante para aprobar con 3.0."
+                data-en="<strong>Final Grade by Periods Mode:</strong> The user enters completed periods with their percentage and grade. If percentages don't add up to 100%, the minimum required grade for the remaining percentage is automatically calculated to pass with 3.0.">
+            <strong>Modo Calcular Definitiva por Cortes:</strong> El usuario ingresa los cortes completados con su porcentaje y nota. Si los porcentajes no suman 100%, se calcula automáticamente la nota mínima necesaria en el porcentaje restante para aprobar con 3.0.
+          </span>
+        </li>
+        <li>
+          <span class="fi">🗂️</span>
+          <span data-es="<strong>Modo Calcular Definitiva por Actividades:</strong> Permite desglosar cada corte en partes (talleres, exámenes, actividades) con sus propios porcentajes internos y promediar las notas de cada actividad por separado."
+                data-en="<strong>Final Grade by Activities Mode:</strong> Allows breaking down each period into parts (workshops, exams, activities) with their own internal percentages and averaging each activity's grades separately.">
+            <strong>Modo Calcular Definitiva por Actividades:</strong> Permite desglosar cada corte en partes (talleres, exámenes, actividades) con sus propios porcentajes internos y promediar las notas de cada actividad por separado.
+          </span>
+        </li>
+        <li>
+          <span class="fi">🎯</span>
+          <span data-es="<strong>Modo Nota Mínima:</strong> Detecta si ya se ha superado el 50% del curso y presenta dos estrategias: obtener la misma nota en todos los cortes restantes, o una distribución proporcional al peso de cada corte."
+                data-en="<strong>Minimum Grade Mode:</strong> Detects if more than 50% of the course is completed and presents two strategies: achieving the same grade in all remaining periods, or a proportional distribution based on each period's weight.">
+            <strong>Modo Nota Mínima:</strong> Detecta si ya se ha superado el 50% del curso y presenta dos estrategias: obtener la misma nota en todos los cortes restantes, o una distribución proporcional al peso de cada corte.
+          </span>
+        </li>
+        <li>
+          <span class="fi">➕</span>
+          <span data-es="<strong>Cortes dinámicos:</strong> El usuario puede agregar o eliminar cortes en tiempo real sin recargar la página, adaptándose a la estructura de cualquier asignatura."
+                data-en="<strong>Dynamic periods:</strong> The user can add or remove grading periods in real time without reloading the page, adapting to the structure of any course.">
+            <strong>Cortes dinámicos:</strong> El usuario puede agregar o eliminar cortes en tiempo real sin recargar la página, adaptándose a la estructura de cualquier asignatura.
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="Lógica de cálculo" data-en="Calculation Logic">Lógica de cálculo</h2>
+      <div class="formula-box">
+        <div class="formula-label" data-es="// Nota definitiva ponderada" data-en="// Weighted final grade">// Nota definitiva ponderada</div>
+        <span class="var">final_grade</span> <span class="op">=</span> Σ ( <span class="var">grade_i</span> <span class="op">×</span> ( <span class="var">weight_i</span> / 100 ) )<br/>
+        <br/>
+        <div class="formula-label" data-es="// Nota mínima requerida en porcentaje restante" data-en="// Minimum grade required in remaining percentage">// Nota mínima requerida en porcentaje restante</div>
+        <span class="var">min_grade</span> <span class="op">=</span> ( 3.0 <span class="op">-</span> <span class="var">accumulated</span> ) / ( <span class="var">%_remaining</span> / 100 )<br/>
+        <br/>
+        <div class="formula-label" data-es="// Distribución proporcional por corte" data-en="// Proportional distribution per period">// Distribución proporcional por corte</div>
+        <span class="var">grade_period_i</span> <span class="op">=</span> ( <span class="var">missing_points</span> <span class="op">×</span> ( <span class="var">weight_i</span> / <span class="var">%_remaining</span> ) ) / ( <span class="var">weight_i</span> / 100 )
+      </div>
+
+      <div class="logic-grid">
+        <div class="logic-card">
+          <h4>📐 <span data-es="Ponderación por corte" data-en="Period weighting">Ponderación por corte</span></h4>
+          <p data-es="Cada corte contribuye a la definitiva según su peso relativo. El sistema valida que los porcentajes sumen exactamente 100% antes de calcular."
+             data-en="Each period contributes to the final grade according to its relative weight. The system validates that percentages add up to exactly 100% before calculating.">
+            Cada corte contribuye a la definitiva según su peso relativo. El sistema valida que los porcentajes sumen exactamente 100% antes de calcular.
+          </p>
+        </div>
+        <div class="logic-card">
+          <h4>🔍 <span data-es="Detección del 50%" data-en="50% detection">Detección del 50%</span></h4>
+          <p data-es="Si el porcentaje acumulado supera el 50%, se activa la lógica de nota mínima y se presentan las dos estrategias de distribución disponibles."
+             data-en="If the accumulated percentage exceeds 50%, the minimum grade logic activates and both distribution strategies are presented.">
+            Si el porcentaje acumulado supera el 50%, se activa la lógica de nota mínima y se presentan las dos estrategias de distribución disponibles.
+          </p>
+        </div>
+        <div class="logic-card">
+          <h4>⚖️ <span data-es="Dos estrategias de aprobación" data-en="Two passing strategies">Dos estrategias de aprobación</span></h4>
+          <p data-es="<strong>Igualitaria:</strong> la misma nota en todos los cortes restantes. <strong>Proporcional:</strong> cada corte recibe un objetivo ajustado a su peso porcentual."
+             data-en="<strong>Equal:</strong> the same grade in all remaining periods. <strong>Proportional:</strong> each period receives a target adjusted to its percentage weight.">
+            <strong>Igualitaria:</strong> la misma nota en todos los cortes restantes. <strong>Proporcional:</strong> cada corte recibe un objetivo ajustado a su peso porcentual.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="Tecnologías utilizadas" data-en="Technologies Used">Tecnologías utilizadas</h2>
+      <div class="prose">
+        <p data-es="El proyecto está construido completamente con tecnologías web nativas, sin frameworks ni librerías externas. La lógica está modularizada en dos archivos JavaScript independientes (<code>calcularDefinitiva.js</code> y <code>calcularnotaminima.js</code>), cada uno responsable de un modo de cálculo."
+           data-en="The project is built entirely with native web technologies, without frameworks or external libraries. The logic is modularized into two independent JavaScript files (<code>calcularDefinitiva.js</code> and <code>calcularnotaminima.js</code>), each responsible for one calculation mode.">
+          El proyecto está construido completamente con tecnologías web nativas, sin frameworks ni librerías externas. La lógica está modularizada en dos archivos JavaScript independientes (<code>calcularDefinitiva.js</code> y <code>calcularnotaminima.js</code>), cada uno responsable de un modo de cálculo.
+        </p>
+      </div>
+      <div class="tech-tags">
+        <span class="tech-tag">HTML5</span>
+        <span class="tech-tag">CSS3</span>
+        <span class="tech-tag">JavaScript ES6</span>
+        <span class="tech-tag">Dynamic DOM</span>
+        <span class="tech-tag">Vercel Deploy</span>
+        <span class="tech-tag">Responsive Design</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span>© 2025 Cristian Leon &nbsp;·&nbsp;</span>
+    <a href="../../index.html">← <span data-es="Volver al portafolio" data-en="Back to portfolio">Volver al portafolio</span></a>
+  </footer>
+
+  <script src="NotaFinal.js"></script>
+</body>
+</html>

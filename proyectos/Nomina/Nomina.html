@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calculadora de Nómina</title>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@300;400;500;600&family=Source+Code+Pro&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="Nomina.css"/>
+</head>
+<body>
+
+  <nav class="topbar">
+    <a href="../../index.html" class="back-btn">← <span data-es="Volver al portafolio" data-en="Back to portfolio">Volver al portafolio</span></a>
+    <div class="topbar-right">
+      <span class="breadcrumb" data-es="Proyectos / Calculadora de Nómina" data-en="Projects / Payroll Calculator">Proyectos / Calculadora de Nómina</span>
+      <div class="lang-switch">
+        <button class="lang-btn active" onclick="setLang('es')">ES</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-badge" data-es="💼 Proyecto Laboral · Web App" data-en="💼 Payroll Project · Web App">💼 Proyecto Laboral · Web App</div>
+    <h1 data-es="Calculadora de<br/>Nómina Colombiana" data-en="Colombian<br/>Payroll Calculator">Calculadora de<br/>Nómina Colombiana</h1>
+    <p class="hero-subtitle"
+       data-es="Herramienta web para gestionar salarios, deducciones legales y pagos por quincena según la normativa laboral colombiana vigente."
+       data-en="Web tool to manage salaries, legal deductions and bi-weekly payments according to current Colombian labor regulations.">
+      Herramienta web para gestionar salarios, deducciones legales y pagos por quincena según la normativa laboral colombiana vigente.
+    </p>
+    <div class="hero-links">
+      <a href="https://nomina-tau.vercel.app/" target="_blank" class="btn-primary">🌐 <span data-es="Ver aplicación" data-en="View app">Ver aplicación</span></a>
+      <a href="https://github.com/TesterLucy/Nomina.git" target="_blank" class="btn-outline">📂 <span data-es="Ver en GitHub" data-en="View on GitHub">Ver en GitHub</span></a>
+    </div>
+  </header>
+
+  <main class="content">
+
+    <div class="meta-grid">
+      <div class="meta-card">
+        <div class="meta-icon">📅</div>
+        <div class="meta-label" data-es="Año" data-en="Year">Año</div>
+        <div class="meta-value">2025</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-icon">🏛️</div>
+        <div class="meta-label" data-es="Normativa" data-en="Regulation">Normativa</div>
+        <div class="meta-value" data-es="Ley colombiana" data-en="Colombian law">Ley colombiana</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-icon">📡</div>
+        <div class="meta-label">Deploy</div>
+        <div class="meta-value">Vercel</div>
+      </div>
+    </div>
+
+    <!-- DESCRIPCION -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="Descripción general" data-en="Overview">Descripción general</h2>
+      <div class="prose">
+        <p data-es="Esta aplicación nace de la necesidad de simplificar el proceso de liquidación de nómina para pequeñas empresas y contadores independientes en Colombia. El cálculo manual de salarios, deducciones y auxilios es tedioso y propenso a errores; esta herramienta lo automatiza completamente."
+           data-en="This application was born from the need to simplify the payroll settlement process for small businesses and independent accountants in Colombia. Manual calculation of salaries, deductions and allowances is tedious and error-prone; this tool automates it completely.">
+          Esta aplicación nace de la necesidad de simplificar el proceso de liquidación de nómina para pequeñas empresas y contadores independientes en Colombia. El cálculo manual de salarios, deducciones y auxilios es tedioso y propenso a errores; esta herramienta lo automatiza completamente.
+        </p>
+        <p data-es="El sistema incluye autenticación básica, selección de empleados, asignación de salarios y cálculo completo del desglose salarial: valor por día, valor por hora, horas extra, descuentos a salud y pensión, auxilio de transporte y pago por quincenas."
+           data-en="The system includes basic authentication, employee selection, salary assignment and complete calculation of the salary breakdown: daily rate, hourly rate, overtime hours, health and pension deductions, transportation allowance and bi-weekly payments.">
+          El sistema incluye autenticación básica, selección de empleados, asignación de salarios y cálculo completo del desglose salarial: valor por día, valor por hora, horas extra, descuentos a salud y pensión, auxilio de transporte y pago por quincenas.
+        </p>
+      </div>
+      <div class="callout">
+        <span class="ci">⚠️</span>
+        <span data-es="La versión actual no incluye el cálculo de Retefuente. Está en desarrollo para una próxima versión que contemplará los rangos de retención según la UVT vigente."
+              data-en="The current version does not include Withholding Tax (Retefuente) calculation. It is under development for a next version that will cover retention ranges according to the current UVT.">
+          La versión actual no incluye el cálculo de Retefuente. Está en desarrollo para una próxima versión que contemplará los rangos de retención según la UVT vigente.
+        </span>
+      </div>
+    </section>
+
+    <!-- FUNCIONALIDADES -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="Funcionalidades principales" data-en="Main Features">Funcionalidades principales</h2>
+      <ul class="feature-list">
+        <li>
+          <span class="fi">🔐</span>
+          <span data-es="<strong>Autenticación de administrador:</strong> Acceso protegido por correo y contraseña antes de ingresar al módulo de nómina."
+                data-en="<strong>Admin authentication:</strong> Access protected by email and password before entering the payroll module.">
+            <strong>Autenticación de administrador:</strong> Acceso protegido por correo y contraseña antes de ingresar al módulo de nómina.
+          </span>
+        </li>
+        <li>
+          <span class="fi">👥</span>
+          <span data-es="<strong>Gestión de empleados:</strong> Selección de empleado y asignación individual de salario base antes del cálculo."
+                data-en="<strong>Employee management:</strong> Employee selection and individual base salary assignment before calculation.">
+            <strong>Gestión de empleados:</strong> Selección de empleado y asignación individual de salario base antes del cálculo.
+          </span>
+        </li>
+        <li>
+          <span class="fi">⏱️</span>
+          <span data-es="<strong>Cálculo de horas extra:</strong> Se registran las horas extra del mes y se calcula su valor con el recargo del 25% sobre la hora ordinaria (horas diurnas)."
+                data-en="<strong>Overtime calculation:</strong> Monthly overtime hours are recorded and their value is calculated with a 25% surcharge over the ordinary hour rate (daytime hours).">
+            <strong>Cálculo de horas extra:</strong> Se registran las horas extra del mes y se calcula su valor con el recargo del 25% sobre la hora ordinaria (horas diurnas).
+          </span>
+        </li>
+        <li>
+          <span class="fi">🚌</span>
+          <span data-es="<strong>Auxilio de transporte automático:</strong> Se aplica automáticamente si el salario es igual o inferior a dos SMMLV, conforme al decreto colombiano."
+                data-en="<strong>Automatic transportation allowance:</strong> Automatically applied if the salary is equal to or less than two minimum wages (SMMLV), in accordance with Colombian decree.">
+            <strong>Auxilio de transporte automático:</strong> Se aplica automáticamente si el salario es igual o inferior a dos SMMLV, conforme al decreto colombiano.
+          </span>
+        </li>
+        <li>
+          <span class="fi">📋</span>
+          <span data-es="<strong>Desglose completo por quincena:</strong> Muestra primera y segunda quincena por separado, con todos los descuentos y adiciones aplicados."
+                data-en="<strong>Full bi-weekly breakdown:</strong> Shows first and second paycheck separately, with all deductions and additions applied.">
+            <strong>Desglose completo por quincena:</strong> Muestra primera y segunda quincena por separado, con todos los descuentos y adiciones aplicados.
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- LOGICA -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="Lógica de cálculo" data-en="Calculation Logic">Lógica de cálculo</h2>
+
+      <div class="ledger">
+        <div class="ledger-header">
+          <span data-es="Concepto" data-en="Concept">Concepto</span>
+          <span data-es="Fórmula" data-en="Formula">Fórmula</span>
+        </div>
+        <div class="ledger-row">
+          <span data-es="Valor por día" data-en="Daily rate">Valor por día</span>
+          <code>salario / 30</code>
+        </div>
+        <div class="ledger-row">
+          <span data-es="Valor por hora" data-en="Hourly rate">Valor por hora</span>
+          <code>salario / 230</code>
+        </div>
+        <div class="ledger-row">
+          <span data-es="Valor hora extra" data-en="Overtime rate">Valor hora extra</span>
+          <code>valorHora × 1.25</code>
+        </div>
+        <div class="ledger-row">
+          <span data-es="Descuento pensión" data-en="Pension deduction">Descuento pensión</span>
+          <code>base × 4%</code>
+        </div>
+        <div class="ledger-row">
+          <span data-es="Descuento salud" data-en="Health deduction">Descuento salud</span>
+          <code>base × 4%</code>
+        </div>
+        <div class="ledger-row">
+          <span data-es="Auxilio transporte" data-en="Transport allowance">Auxilio transporte</span>
+          <code data-es="$162.000 si salario ≤ 2 SMMLV" data-en="$162,000 if salary ≤ 2 SMMLV">$162.000 si salario ≤ 2 SMMLV</code>
+        </div>
+        <div class="ledger-row ledger-total">
+          <span data-es="Salario bruto final" data-en="Final gross salary">Salario bruto final</span>
+          <code data-es="Q1 + Q2 (neto)" data-en="Q1 + Q2 (net)">Q1 + Q2 (neto)</code>
+        </div>
+      </div>
+
+      <div class="logic-grid">
+        <div class="logic-card">
+          <h4>💰 <span data-es="Base de descuentos" data-en="Deduction base">Base de descuentos</span></h4>
+          <p data-es="Los descuentos de salud y pensión se calculan sobre la base del salario más las horas extra del mes, no solo sobre el salario base."
+             data-en="Health and pension deductions are calculated on the base of salary plus monthly overtime hours, not just the base salary.">
+            Los descuentos de salud y pensión se calculan sobre la base del salario más las horas extra del mes, no solo sobre el salario base.
+          </p>
+        </div>
+        <div class="logic-card">
+          <h4>📆 <span data-es="Pago por quincenas" data-en="Bi-weekly payment">Pago por quincenas</span></h4>
+          <p data-es="La primera quincena es la mitad del salario base. La segunda incluye horas extra, auxilio de transporte y descuenta las deducciones legales."
+             data-en="The first paycheck is half the base salary. The second includes overtime, transportation allowance and deducts legal deductions.">
+            La primera quincena es la mitad del salario base. La segunda incluye horas extra, auxilio de transporte y descuenta las deducciones legales.
+          </p>
+        </div>
+        <div class="logic-card">
+          <h4>📌 <span data-es="Constantes legales 2025" data-en="Legal constants 2025">Constantes legales 2025</span></h4>
+          <p data-es="SMMLV: $1.300.000 · Auxilio de transporte: $162.000 · Pensión empleado: 4% · Salud empleado: 4%"
+             data-en="SMMLV: $1,300,000 · Transport allowance: $162,000 · Employee pension: 4% · Employee health: 4%">
+            SMMLV: $1.300.000 · Auxilio de transporte: $162.000 · Pensión empleado: 4% · Salud empleado: 4%
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECNOLOGIAS -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="Tecnologías utilizadas" data-en="Technologies Used">Tecnologías utilizadas</h2>
+      <div class="prose">
+        <p data-es="Construida con tecnologías web nativas sin ninguna dependencia externa. La lógica de negocio está completamente separada del HTML en <code>script.js</code>, usando constantes para los valores legales que facilitan la actualización anual."
+           data-en="Built with native web technologies with no external dependencies. Business logic is completely separated from HTML in <code>script.js</code>, using constants for legal values that make annual updates easy.">
+          Construida con tecnologías web nativas sin ninguna dependencia externa. La lógica de negocio está completamente separada del HTML en <code>script.js</code>, usando constantes para los valores legales que facilitan la actualización anual.
+        </p>
+      </div>
+      <div class="tech-tags">
+        <span class="tech-tag">HTML5</span>
+        <span class="tech-tag">CSS3</span>
+        <span class="tech-tag">JavaScript ES6</span>
+        <span class="tech-tag">Intl.NumberFormat</span>
+        <span class="tech-tag">DOM dinámico</span>
+        <span class="tech-tag">Vercel Deploy</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span>© 2025 Cristian Leon &nbsp;·&nbsp;</span>
+    <a href="../../index.html">← <span data-es="Volver al portafolio" data-en="Back to portfolio">Volver al portafolio</span></a>
+  </footer>
+
+  <script src="Nomina.js"></script>
+</body>
+</html>

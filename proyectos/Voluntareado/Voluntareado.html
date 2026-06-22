@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Volunteers App</title>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=Lora:wght@400;600&family=Source+Code+Pro&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="Voluntareado.css"/>
+</head>
+<body>
+
+  <nav class="topbar">
+    <a href="../../index.html" class="back-btn">← <span data-es="Volver al portafolio" data-en="Back to portfolio">Volver al portafolio</span></a>
+    <div class="topbar-right">
+      <span class="breadcrumb"></span>
+      <div class="lang-switch">
+        <button class="lang-btn active" onclick="setLang('es')">ES</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero">
+    <div class="hero-leaves" aria-hidden="true">🌿🍃🌱🍀🌾</div>
+    <div class="hero-badge" data-es="🤝 Proyecto Colaborativo · Full Stack Web App" data-en="🤝 Collaborative Project · Full Stack Web App">🤝 Proyecto Colaborativo · Full Stack Web App</div>
+    <h1 data-es="Volunteers App" data-en="Volunteers App">Volunteers App</h1>
+    <p class="hero-subtitle"
+       data-es="Plataforma web de voluntariado donde usuarios pueden registrarse, explorar oportunidades en un mapa interactivo, unirse a actividades y recibir certificados de participación."
+       data-en="Volunteering web platform where users can register, explore opportunities on an interactive map, join activities and receive participation certificates.">
+      Plataforma web de voluntariado donde usuarios pueden registrarse, explorar oportunidades en un mapa interactivo, unirse a actividades y recibir certificados de participación.
+    </p>
+    <div class="hero-links">
+      <a href="#" target="_blank" class="btn-primary">🌐 <span data-es="Ver aplicación" data-en="View app">Ver aplicación</span></a>
+      <a href="https://github.com/TesterLucy/VolunteersApp" target="_blank" class="btn-outline">📂 <span data-es="Ver en GitHub" data-en="View on GitHub">Ver en GitHub</span></a>
+    </div>
+  </header>
+
+  <main class="content">
+
+    <div class="meta-grid">
+      <div class="meta-card">
+        <div class="meta-icon">📅</div>
+        <div class="meta-label" data-es="Año" data-en="Year">Año</div>
+        <div class="meta-value">2025</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-icon">👥</div>
+        <div class="meta-label" data-es="Tipo" data-en="Type">Tipo</div>
+        <div class="meta-value" data-es="Proyecto colaborativo" data-en="Team project">Proyecto colaborativo</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-icon">⚙️</div>
+        <div class="meta-label" data-es="Stack" data-en="Stack">Stack</div>
+        <div class="meta-value">Full Stack</div>
+      </div>
+      <div class="meta-card">
+        <div class="meta-icon">🗺️</div>
+        <div class="meta-label" data-es="Mapa" data-en="Map">Mapa</div>
+        <div class="meta-value">Interactivo</div>
+      </div>
+    </div>
+
+    <!-- DESCRIPCION -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="Descripción general" data-en="Overview">Descripción general</h2>
+      <div class="prose">
+        <p data-es="Volunteers App es una plataforma completa de gestión de voluntariado diseñada para conectar personas con causas sociales. Los usuarios pueden crear su perfil, explorar oportunidades de voluntariado en un mapa interactivo y unirse a actividades según su nivel de experiencia y disponibilidad."
+           data-en="Volunteers App is a complete volunteering management platform designed to connect people with social causes. Users can create their profile, explore volunteering opportunities on an interactive map and join activities based on their experience level and availability.">
+          Volunteers App es una plataforma completa de gestión de voluntariado diseñada para conectar personas con causas sociales. Los usuarios pueden crear su perfil, explorar oportunidades de voluntariado en un mapa interactivo y unirse a actividades según su nivel de experiencia y disponibilidad.
+        </p>
+        <p data-es="El proyecto está construido con una arquitectura full stack: el frontend en HTML, CSS y JavaScript vanilla, y el backend en Node.js con Express. Incluye un sistema de autenticación, recuperación de contraseñas por correo electrónico usando Nodemailer, y generación de certificados PDF con PDFKit al completar actividades."
+           data-en="The project is built with a full stack architecture: frontend in HTML, CSS and vanilla JavaScript, and backend in Node.js with Express. It includes an authentication system, email-based password recovery using Nodemailer, and PDF certificate generation with PDFKit upon completing activities.">
+          El proyecto está construido con una arquitectura full stack: el frontend en HTML, CSS y JavaScript vanilla, y el backend en Node.js con Express. Incluye un sistema de autenticación, recuperación de contraseñas por correo electrónico usando Nodemailer, y generación de certificados PDF con PDFKit al completar actividades.
+        </p>
+      </div>
+      <div class="callout">
+        <span class="ci">🌍</span>
+        <span data-es="El proyecto fomenta la construcción de comunidad y la participación ciudadana, conectando voluntarios con organizaciones de distintos niveles de experiencia y áreas de impacto social."
+              data-en="The project fosters community building and civic participation, connecting volunteers with organizations across different experience levels and social impact areas.">
+          El proyecto fomenta la construcción de comunidad y la participación ciudadana, conectando voluntarios con organizaciones de distintos niveles de experiencia y áreas de impacto social.
+        </span>
+      </div>
+    </section>
+
+    <!-- FUNCIONALIDADES -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="Funcionalidades principales" data-en="Main Features">Funcionalidades principales</h2>
+      <ul class="feature-list">
+        <li>
+          <span class="fi">🔐</span>
+          <span data-es="<strong>Registro e inicio de sesión:</strong> Sistema de autenticación completo con manejo de sesiones. Recuperación de contraseña vía correo electrónico usando Nodemailer y tokens criptográficos."
+                data-en="<strong>Register & login:</strong> Complete authentication system with session management. Password recovery via email using Nodemailer and cryptographic tokens.">
+            <strong>Registro e inicio de sesión:</strong> Sistema de autenticación completo con manejo de sesiones. Recuperación de contraseña vía correo electrónico usando Nodemailer y tokens criptográficos.
+          </span>
+        </li>
+        <li>
+          <span class="fi">🗺️</span>
+          <span data-es="<strong>Mapa interactivo de oportunidades:</strong> Exploración geolocalizada de actividades de voluntariado. Los usuarios pueden ver ubicaciones, detalles y unirse directamente desde el mapa."
+                data-en="<strong>Interactive opportunity map:</strong> Geolocated exploration of volunteering activities. Users can see locations, details and join directly from the map.">
+            <strong>Mapa interactivo de oportunidades:</strong> Exploración geolocalizada de actividades de voluntariado. Los usuarios pueden ver ubicaciones, detalles y unirse directamente desde el mapa.
+          </span>
+        </li>
+        <li>
+          <span class="fi">👤</span>
+          <span data-es="<strong>Gestión de perfil:</strong> Cada voluntario tiene un perfil personalizable con su nivel de experiencia, historial de actividades y datos de contacto."
+                data-en="<strong>Profile management:</strong> Each volunteer has a customizable profile with their experience level, activity history and contact information.">
+            <strong>Gestión de perfil:</strong> Cada voluntario tiene un perfil personalizable con su nivel de experiencia, historial de actividades y datos de contacto.
+          </span>
+        </li>
+        <li>
+          <span class="fi">📄</span>
+          <span data-es="<strong>Generación de certificados PDF:</strong> Al completar una actividad, el sistema genera automáticamente un certificado de participación en PDF con diseño formal usando PDFKit."
+                data-en="<strong>PDF certificate generation:</strong> Upon completing an activity, the system automatically generates a formal participation certificate in PDF using PDFKit.">
+            <strong>Generación de certificados PDF:</strong> Al completar una actividad, el sistema genera automáticamente un certificado de participación en PDF con diseño formal usando PDFKit.
+          </span>
+        </li>
+        <li>
+          <span class="fi">🎯</span>
+          <span data-es="<strong>Filtrado por nivel de experiencia:</strong> Las oportunidades se pueden explorar según el nivel del voluntario (principiante, intermedio, avanzado), facilitando una experiencia personalizada."
+                data-en="<strong>Experience level filtering:</strong> Opportunities can be explored based on the volunteer's level (beginner, intermediate, advanced), enabling a personalized experience.">
+            <strong>Filtrado por nivel de experiencia:</strong> Las oportunidades se pueden explorar según el nivel del voluntario (principiante, intermedio, avanzado), facilitando una experiencia personalizada.
+          </span>
+        </li>
+      </ul>
+    </section>
+
+    <!-- ARQUITECTURA -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="Arquitectura del proyecto" data-en="Project Architecture">Arquitectura del proyecto</h2>
+
+      <div class="arch-grid">
+        <div class="arch-card frontend">
+          <div class="arch-label">Frontend</div>
+          <ul>
+            <li>📄 HTML5 · CSS3 · JS vanilla</li>
+            <li>🗺️ <span data-es="Mapa interactivo" data-en="Interactive map">Mapa interactivo</span></li>
+            <li>🎨 <span data-es="Estilos por módulo" data-en="Module-based styles">Estilos por módulo</span></li>
+            <li>📜 <span data-es="Certificados visuales" data-en="Visual certificates">Certificados visuales</span></li>
+          </ul>
+        </div>
+        <div class="arch-arrow">→</div>
+        <div class="arch-card backend">
+          <div class="arch-label">Backend</div>
+          <ul>
+            <li>🟢 Node.js · Express</li>
+            <li>📧 Nodemailer</li>
+            <li>🔒 Crypto <span data-es="(tokens)" data-en="(tokens)">(tokens)</span></li>
+            <li>📄 PDFKit</li>
+            <li>🔄 CORS · Body-parser</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="folder-tree">
+        <div class="tree-title">📁 <span data-es="Estructura de carpetas" data-en="Folder structure">Estructura de carpetas</span></div>
+        <pre>
+VolunteersApp/
+├── 📁 front/          <span data-es"># Interfaz de usuario" data-en="# User interface"># Interfaz de usuario</span>
+│   ├── css/
+│   ├── js/
+│   └── pages/
+├── 📁 back/           <span data-es="# Servidor y lógica" data-en="# Server & logic"># Servidor y lógica</span>
+│   └── server.js
+└── index.html         <span data-es="# Punto de entrada" data-en="# Entry point"># Punto de entrada</span></pre>
+      </div>
+    </section>
+
+    <!-- TECNOLOGIAS -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="Tecnologías utilizadas" data-en="Technologies Used">Tecnologías utilizadas</h2>
+      <div class="prose">
+        <p data-es="El proyecto separa claramente responsabilidades entre frontend y backend. El servidor Express gestiona rutas de autenticación, recuperación de contraseña y generación de PDFs. El frontend consume estas rutas mediante fetch y renderiza los resultados dinámicamente."
+           data-en="The project clearly separates responsibilities between frontend and backend. The Express server manages authentication routes, password recovery and PDF generation. The frontend consumes these routes via fetch and renders results dynamically.">
+          El proyecto separa claramente responsabilidades entre frontend y backend. El servidor Express gestiona rutas de autenticación, recuperación de contraseña y generación de PDFs. El frontend consume estas rutas mediante fetch y renderiza los resultados dinámicamente.
+        </p>
+      </div>
+      <div class="tech-tags">
+        <span class="tech-tag tag-js">JavaScript</span>
+        <span class="tech-tag tag-node">Node.js</span>
+        <span class="tech-tag tag-node">Express</span>
+        <span class="tech-tag tag-green">Nodemailer</span>
+        <span class="tech-tag tag-green">PDFKit</span>
+        <span class="tech-tag tag-html">HTML5</span>
+        <span class="tech-tag tag-css">CSS3</span>
+        <span class="tech-tag tag-green">Crypto</span>
+        <span class="tech-tag tag-green">CORS</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-heart">🌱</div>
+    <span>© 2025 Cristian Leon &nbsp;·&nbsp;</span>
+    <a href="../../index.html">← <span data-es="Volver al portafolio" data-en="Back to portfolio">Volver al portafolio</span></a>
+  </footer>
+
+  <script src="Voluntareado.js"></script>
+</body>
+</html>

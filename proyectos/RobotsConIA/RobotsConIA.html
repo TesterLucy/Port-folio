@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Robot Futbolista con IA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;900&family=Inter:wght@300;400;500;600&family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="RobotsConIA.css"/>
+</head>
+<body>
+
+  <nav class="topbar">
+    <a href="../../index.html" class="back-btn">← <span data-es="Volver al portafolio" data-en="Back to portfolio">Volver al portafolio</span></a>
+    <div class="topbar-right">
+      <span class="breadcrumb">Proyectos / Robot IA</span>
+      <div class="lang-switch">
+        <button class="lang-btn active" onclick="setLang('es')">ES</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-grid" aria-hidden="true"></div>
+    <div class="hero-orb orb1" aria-hidden="true"></div>
+    <div class="hero-orb orb2" aria-hidden="true"></div>
+    <div class="hero-inner">
+      <div class="hero-badge" data-es="⚽ IA · Robótica · RoboCup SSL · Universidad Sergio Arboleda" data-en="⚽ AI · Robotics · RoboCup SSL · Universidad Sergio Arboleda">⚽ IA · Robótica · RoboCup SSL · Universidad Sergio Arboleda</div>
+      <h1>ROBOT <span class="accent-cyan">FUTBOLISTA</span><br/><span class="accent-purple">CON IA</span></h1>
+      <p class="hero-subtitle"
+         data-es="Sistema de percepción inteligente híbrido: Red Neuronal MLP (96.13% precisión) + Algoritmo Genético + PSO. Dos robots autónomos — Jugador y Portero — que se comunican vía ESP-NOW en tiempo real."
+         data-en="Hybrid intelligent perception system: MLP Neural Network (96.13% accuracy) + Genetic Algorithm + PSO. Two autonomous robots — Player and Goalkeeper — communicating via ESP-NOW in real time.">
+        Sistema de percepción inteligente híbrido: Red Neuronal MLP (96.13% precisión) + Algoritmo Genético + PSO. Dos robots autónomos — Jugador y Portero — que se comunican vía ESP-NOW en tiempo real.
+      </p>
+      <div class="hero-links">
+        <a href="#" target="_blank" class="btn-primary">📂 <span data-es="Ver en GitHub" data-en="View on GitHub">Ver en GitHub</span></a>
+      </div>
+      <div class="hero-stats">
+        <div class="hstat"><span class="hstat-num">96.13<span class="hstat-unit">%</span></span><span class="hstat-label" data-es="Precisión NN" data-en="NN Accuracy">Precisión NN</span></div>
+        <div class="hstat-sep">|</div>
+        <div class="hstat"><span class="hstat-num">9<span class="hstat-unit">→12→4</span></span><span class="hstat-label" data-es="Arquitectura MLP" data-en="MLP Architecture">Arquitectura MLP</span></div>
+        <div class="hstat-sep">|</div>
+        <div class="hstat"><span class="hstat-num">2841</span><span class="hstat-label" data-es="Muestras entrenamiento" data-en="Training samples">Muestras entrenamiento</span></div>
+        <div class="hstat-sep">|</div>
+        <div class="hstat"><span class="hstat-num">&lt;100<span class="hstat-unit">ms</span></span><span class="hstat-label" data-es="Ciclo decisión" data-en="Decision cycle">Ciclo decisión</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="content">
+
+    <!-- GALERIA -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="🤖 El sistema físico" data-en="🤖 The Physical System">🤖 El sistema físico</h2>
+      <div class="gallery">
+        <div class="gallery-item main-img">
+          <img src="RobotConIA.jpeg" alt="Robot con IA físico encendido"/>
+          <div class="img-caption" data-es="Prototipo físico — ESP32, sensores HC-SR04, TCS34725 y motores DC activados" data-en="Physical prototype — ESP32, HC-SR04 sensors, TCS34725 and active DC motors">Prototipo físico — ESP32, sensores HC-SR04, TCS34725 y motores DC activados</div>
+        </div>
+        <div class="gallery-item">
+          <img src="RobotConIA3D.jpeg" alt="Diseño 3D del robot con IA"/>
+          <div class="img-caption" data-es="Modelo CAD 3D — vista explosionada del chasis y piezas MDF" data-en="3D CAD model — exploded view of MDF chassis and parts">Modelo CAD 3D — vista explosionada del chasis y piezas MDF</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESCRIPCION -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="📋 Descripción general" data-en="📋 Overview">📋 Descripción general</h2>
+      <div class="prose">
+        <p data-es="Este proyecto implementa un sistema de percepción inteligente completo para robots de fútbol en un entorno RoboCup Small Size League (SSL). El campo mide 180×90 cm y los robots deben tomar decisiones en ciclos menores a 100 ms. Cada robot cumple un rol específico: <strong>Jugador</strong> (atacante) o <strong>Portero</strong> (defensor), coordinándose en tiempo real."
+           data-en="This project implements a complete intelligent perception system for soccer robots in a RoboCup Small Size League (SSL) environment. The field measures 180×90 cm and robots must make decisions in cycles under 100 ms. Each robot fulfills a specific role: <strong>Player</strong> (attacker) or <strong>Goalkeeper</strong> (defender), coordinating in real time.">
+          Este proyecto implementa un sistema de percepción inteligente completo para robots de fútbol en un entorno RoboCup Small Size League (SSL). El campo mide 180×90 cm y los robots deben tomar decisiones en ciclos menores a 100 ms. Cada robot cumple un rol específico: <strong>Jugador</strong> (atacante) o <strong>Portero</strong> (defensor), coordinándose en tiempo real.
+        </p>
+        <p data-es="La arquitectura combina tres capas de inteligencia: una <strong>Red Neuronal MLP</strong> para clasificar el entorno, <strong>Algoritmos Genéticos (GA)</strong> que evolucionan parámetros estratégicos a ~1 Hz, y <strong>PSO (Particle Swarm Optimization)</strong> que optimiza trayectorias locales a 10–20 Hz. Esta combinación supera las limitaciones de las reglas fijas ante condiciones dinámicas e incertidumbre del campo."
+           data-en="The architecture combines three intelligence layers: an <strong>MLP Neural Network</strong> to classify the environment, <strong>Genetic Algorithms (GA)</strong> that evolve strategic parameters at ~1 Hz, and <strong>PSO (Particle Swarm Optimization)</strong> that optimizes local trajectories at 10–20 Hz. This combination overcomes the limitations of fixed rules under dynamic conditions and field uncertainty.">
+          La arquitectura combina tres capas de inteligencia: una <strong>Red Neuronal MLP</strong> para clasificar el entorno, <strong>Algoritmos Genéticos (GA)</strong> que evolucionan parámetros estratégicos a ~1 Hz, y <strong>PSO (Particle Swarm Optimization)</strong> que optimiza trayectorias locales a 10–20 Hz. Esta combinación supera las limitaciones de las reglas fijas ante condiciones dinámicas e incertidumbre del campo.
+        </p>
+      </div>
+    </section>
+
+    <!-- ARQUITECTURA IA -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="🧠 Arquitectura de IA — Sistema híbrido" data-en="🧠 AI Architecture — Hybrid System">🧠 Arquitectura de IA — Sistema híbrido</h2>
+      <div class="ai-layers">
+        <div class="ai-layer layer-nn">
+          <div class="layer-tag" data-es="Capa de Percepción" data-en="Perception Layer">Capa de Percepción</div>
+          <div class="layer-title">MLP Neural Network</div>
+          <div class="layer-freq" data-es="Cada ciclo (~20ms)" data-en="Every cycle (~20ms)">Cada ciclo (~20ms)</div>
+          <ul class="layer-list">
+            <li data-es="9 entradas: distancias + variaciones + color RGB" data-en="9 inputs: distances + variations + RGB color">9 entradas: distancias + variaciones + color RGB</li>
+            <li data-es="12 neuronas ocultas (activación Sigmoid)" data-en="12 hidden neurons (Sigmoid activation)">12 neuronas ocultas (activación Sigmoid)</li>
+            <li data-es="4 salidas (Softmax): Pared / Oponente / Balón libre / Balón disputado" data-en="4 outputs (Softmax): Wall / Opponent / Free ball / Contested ball">4 salidas (Softmax): Pared / Oponente / Balón libre / Balón disputado</li>
+            <li data-es="Entrenada con 2841 muestras — 96.13% precisión" data-en="Trained on 2841 samples — 96.13% accuracy">Entrenada con 2841 muestras — 96.13% precisión</li>
+          </ul>
+        </div>
+        <div class="layer-arrow">↓</div>
+        <div class="ai-layer layer-pso">
+          <div class="layer-tag" data-es="Capa Táctica" data-en="Tactical Layer">Capa Táctica</div>
+          <div class="layer-title">PSO — Particle Swarm Optimization</div>
+          <div class="layer-freq">10–20 Hz</div>
+          <ul class="layer-list">
+            <li data-es="Optimización de trayectorias locales en tiempo real" data-en="Real-time local trajectory optimization">Optimización de trayectorias locales en tiempo real</li>
+            <li data-es="Ecuación de velocidad: v = w·v + c₁·r₁·(pBest−x) + c₂·r₂·(gBest−x)" data-en="Velocity equation: v = w·v + c₁·r₁·(pBest−x) + c₂·r₂·(gBest−x)">Ecuación de velocidad: v = w·v + c₁·r₁·(pBest−x) + c₂·r₂·(gBest−x)</li>
+            <li>w=0.7 · c₁=1.5 · c₂=1.5</li>
+          </ul>
+        </div>
+        <div class="layer-arrow">↓</div>
+        <div class="ai-layer layer-ga">
+          <div class="layer-tag" data-es="Capa Estratégica" data-en="Strategic Layer">Capa Estratégica</div>
+          <div class="layer-title">GA — Genetic Algorithm</div>
+          <div class="layer-freq">~1 Hz</div>
+          <ul class="layer-list">
+            <li data-es="Evoluciona parámetros globales: genes[g1, g2, g3]" data-en="Evolves global parameters: genes[g1, g2, g3]">Evoluciona parámetros globales: genes[g1, g2, g3]</li>
+            <li data-es="Fitness = goles marcados + distancia al objetivo + detecciones de color" data-en="Fitness = goals scored + distance to target + color detections">Fitness = goles marcados + distancia al objetivo + detecciones de color</li>
+            <li data-es="Mutación aleatoria cada 10 ciclos sobre genes[0..2]" data-en="Random mutation every 10 cycles on genes[0..2]">Mutación aleatoria cada 10 ciclos sobre genes[0..2]</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FSM STATES -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="🔄 Máquinas de estados (FSM)" data-en="🔄 Finite State Machines (FSM)">🔄 Máquinas de estados (FSM)</h2>
+      <div class="fsm-grid">
+        <div class="fsm-block">
+          <div class="fsm-title robot-player">⚽ <span data-es="Jugador" data-en="Player">Jugador</span></div>
+          <div class="fsm-states">
+            <div class="fsm-state s-search">
+              <span class="fsm-icon">🔍</span>
+              <div><strong>BUSCAR</strong><p data-es="PSO guía exploración — giros adaptativos" data-en="PSO guides exploration — adaptive turns">PSO guía exploración — giros adaptativos</p></div>
+            </div>
+            <div class="fsm-arrow">↓</div>
+            <div class="fsm-state s-attack">
+              <span class="fsm-icon">⚡</span>
+              <div><strong>ATACAR</strong><p data-es="Avanza hacia el balón — velocidad ajustada por genes[2]" data-en="Advances toward ball — speed adjusted by genes[2]">Avanza hacia el balón — velocidad ajustada por genes[2]</p></div>
+            </div>
+            <div class="fsm-arrow">↓</div>
+            <div class="fsm-state s-fight">
+              <span class="fsm-icon">💥</span>
+              <div><strong>PELEAR</strong><p data-es="Balón disputado — máxima potencia frontal" data-en="Contested ball — maximum front power">Balón disputado — máxima potencia frontal</p></div>
+            </div>
+            <div class="fsm-arrow">↓</div>
+            <div class="fsm-state s-avoid">
+              <span class="fsm-icon">🚫</span>
+              <div><strong>EVITAR</strong><p data-es="Pared detectada — retroceso + giro + vuelta a BUSCAR" data-en="Wall detected — back + turn + return to SEARCH">Pared detectada — retroceso + giro + vuelta a BUSCAR</p></div>
+            </div>
+          </div>
+        </div>
+        <div class="fsm-block">
+          <div class="fsm-title robot-keeper">🥅 <span data-es="Portero" data-en="Goalkeeper">Portero</span></div>
+          <div class="fsm-states">
+            <div class="fsm-state s-quiet">
+              <span class="fsm-icon">🧘</span>
+              <div><strong>QUIETO</strong><p data-es="Estado base — escucha ESP-NOW del jugador" data-en="Base state — listens to ESP-NOW from player">Estado base — escucha ESP-NOW del jugador</p></div>
+            </div>
+            <div class="fsm-arrow">↓</div>
+            <div class="fsm-state s-orient">
+              <span class="fsm-icon">🎯</span>
+              <div><strong>ORIENTAR</strong><p data-es="Giro suave (≤150ms) hacia la dirección del jugador" data-en="Soft turn (≤150ms) toward player direction">Giro suave (≤150ms) hacia la dirección del jugador</p></div>
+            </div>
+            <div class="fsm-arrow">↓</div>
+            <div class="fsm-state s-block">
+              <span class="fsm-icon">🛡️</span>
+              <div><strong>BLOQUEAR</strong><p data-es="Amenaza alta (Perceptrón de peligro) — se interpone en trayectoria" data-en="High threat (Danger perceptron) — intercepts trajectory">Amenaza alta (Perceptrón de peligro) — se interpone en trayectoria</p></div>
+            </div>
+            <div class="fsm-arrow">↓</div>
+            <div class="fsm-state s-clear">
+              <span class="fsm-icon">💨</span>
+              <div><strong>DESPEJAR</strong><p data-es="Balón &lt;15cm — avance + retroceso a posición base" data-en="Ball &lt;15cm — advance + return to base position">Balón &lt;15cm — avance + retroceso a posición base</p></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COMUNICACION ESP-NOW -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="📡 Comunicación ESP-NOW entre robots" data-en="📡 ESP-NOW Communication Between Robots">📡 Comunicación ESP-NOW entre robots</h2>
+      <div class="prose">
+        <p data-es="Los dos robots se comunican inalámbricamente vía <strong>ESP-NOW</strong> (protocolo peer-to-peer de Espressif sobre WiFi, sin router). El jugador envía su estado cada ciclo al portero con tres datos: dirección del objeto detectado, estado actual de la FSM y distancia central." data-en="Both robots communicate wirelessly via <strong>ESP-NOW</strong> (Espressif peer-to-peer protocol over WiFi, no router). The player sends its state every cycle to the goalkeeper with three data points: direction of detected object, current FSM state, and center distance.">
+          Los dos robots se comunican inalámbricamente vía <strong>ESP-NOW</strong> (protocolo peer-to-peer de Espressif sobre WiFi, sin router). El jugador envía su estado cada ciclo al portero con tres datos: dirección del objeto detectado, estado actual de la FSM y distancia central.
+        </p>
+      </div>
+      <div class="espnow-diagram">
+        <div class="espnow-node node-player">
+          <div class="node-icon">⚽</div>
+          <div class="node-label" data-es="JUGADOR" data-en="PLAYER">JUGADOR</div>
+          <div class="node-sub">ESP32 · MAC: A4:F0:0F:5D:B7:64</div>
+        </div>
+        <div class="espnow-link">
+          <div class="espnow-msg">📦 <code>{dirección, estado, distCentro}</code></div>
+          <div class="espnow-arrow">→→→ ESP-NOW →→→</div>
+        </div>
+        <div class="espnow-node node-keeper">
+          <div class="node-icon">🥅</div>
+          <div class="node-label" data-es="PORTERO" data-en="GOALKEEPER">PORTERO</div>
+          <div class="node-sub">ESP32 · MAC: D4:E9:F4:AB:3D:18</div>
+        </div>
+      </div>
+      <div class="callout">
+        <span class="ci">🧮</span>
+        <span data-es="El portero usa dos <strong>Perceptrones adicionales</strong>: uno de <em>peligro</em> (5 entradas → sigmoid → umbral de amenaza) y uno de <em>alineación</em> (3 entradas → decide hacia qué lado girar para interponerse según la posición del jugador)."
+              data-en="The goalkeeper uses two <strong>additional Perceptrons</strong>: a <em>danger</em> one (5 inputs → sigmoid → threat threshold) and an <em>alignment</em> one (3 inputs → decides which side to turn to intercept based on player position).">
+          El portero usa dos <strong>Perceptrones adicionales</strong>: uno de <em>peligro</em> (5 entradas → sigmoid → umbral de amenaza) y uno de <em>alineación</em> (3 entradas → decide hacia qué lado girar para interponerse según la posición del jugador).
+        </span>
+      </div>
+    </section>
+
+    <!-- RED NEURONAL DETALLE -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="🔬 Red neuronal — Detalles técnicos" data-en="🔬 Neural Network — Technical Details">🔬 Red neuronal — Detalles técnicos</h2>
+      <div class="nn-detail-grid">
+        <div class="nn-box">
+          <div class="nn-box-title" data-es="Entradas (9)" data-en="Inputs (9)">Entradas (9)</div>
+          <ul class="nn-list">
+            <li>d_izq · d_cent · d_der <span data-es="(distancias cm)" data-en="(distances cm)">(distancias cm)</span></li>
+            <li>var_i · var_c · var_d <span data-es="(variación entre lecturas)" data-en="(variation between readings)">(variación entre lecturas)</span></li>
+            <li>colorR · colorG · colorB <span data-es="(sensor TCS34725 raw)" data-en="(TCS34725 raw sensor)">(sensor TCS34725 raw)</span></li>
+          </ul>
+        </div>
+        <div class="nn-arrow-h">→</div>
+        <div class="nn-box nn-hidden">
+          <div class="nn-box-title" data-es="Capa Oculta (12)" data-en="Hidden Layer (12)">Capa Oculta (12)</div>
+          <ul class="nn-list">
+            <li data-es="Normalización min-max antes de pasar" data-en="Min-max normalization before passing">Normalización min-max antes de pasar</li>
+            <li>Activación: <code>sigmoid(z)</code></li>
+            <li data-es="Pesos W1[9][12] + BIAS1[12]" data-en="Weights W1[9][12] + BIAS1[12]">Pesos W1[9][12] + BIAS1[12]</li>
+          </ul>
+        </div>
+        <div class="nn-arrow-h">→</div>
+        <div class="nn-box nn-output">
+          <div class="nn-box-title" data-es="Salidas (4)" data-en="Outputs (4)">Salidas (4)</div>
+          <ul class="nn-list">
+            <li>0 — <span data-es="Pared" data-en="Wall">Pared</span></li>
+            <li>1 — <span data-es="Oponente" data-en="Opponent">Oponente</span></li>
+            <li>2 — <span data-es="Balón libre" data-en="Free ball">Balón libre</span></li>
+            <li>3 — <span data-es="Balón disputado" data-en="Contested ball">Balón disputado</span></li>
+          </ul>
+          <div class="nn-softmax">Softmax + Cross-Entropy Loss</div>
+        </div>
+      </div>
+      <div class="accuracy-bar-wrap">
+        <span class="accuracy-label" data-es="Precisión sobre datos reales" data-en="Accuracy on real data">Precisión sobre datos reales</span>
+        <div class="accuracy-bar"><div class="accuracy-fill" data-target="96.13">0%</div></div>
+        <span class="accuracy-val">96.13%</span>
+      </div>
+    </section>
+
+    <!-- HARDWARE -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="⚡ Hardware del sistema" data-en="⚡ System Hardware">⚡ Hardware del sistema</h2>
+      <div class="hw-grid">
+        <div class="hw-card">
+          <div class="hw-icon">🧠</div>
+          <div class="hw-name">ESP32</div>
+          <div class="hw-desc" data-es="Microcontrolador principal. Ejecuta MLP, PSO, GA y ESP-NOW simultáneamente en ciclos de 20ms." data-en="Main microcontroller. Runs MLP, PSO, GA and ESP-NOW simultaneously in 20ms cycles.">Microcontrolador principal. Ejecuta MLP, PSO, GA y ESP-NOW simultáneamente en ciclos de 20ms.</div>
+        </div>
+        <div class="hw-card">
+          <div class="hw-icon">📡</div>
+          <div class="hw-name">HC-SR04 ×3</div>
+          <div class="hw-desc" data-es="Sensores ultrasónicos izquierdo, centro y derecho. Filtro de mediana móvil para reducir ruido." data-en="Left, center and right ultrasonic sensors. Moving median filter to reduce noise.">Sensores ultrasónicos izquierdo, centro y derecho. Filtro de mediana móvil para reducir ruido.</div>
+        </div>
+        <div class="hw-card">
+          <div class="hw-icon">🎨</div>
+          <div class="hw-name">TCS34725</div>
+          <div class="hw-desc" data-es="Sensor de color RGB (I²C). Identifica el balón por su color. PCA aplicado en variables GA/PSO." data-en="RGB color sensor (I²C). Identifies the ball by color. PCA applied on GA/PSO variables.">Sensor de color RGB (I²C). Identifica el balón por su color. PCA aplicado en variables GA/PSO.</div>
+        </div>
+        <div class="hw-card">
+          <div class="hw-icon">⚙️</div>
+          <div class="hw-name">TB6612FNG</div>
+          <div class="hw-desc" data-es="Driver dual de motores DC. Control independiente de Motor A y B mediante PWM 1kHz 8-bit (0–255)." data-en="Dual DC motor driver. Independent control of Motor A and B via 1kHz 8-bit PWM (0–255).">Driver dual de motores DC. Control independiente de Motor A y B mediante PWM 1kHz 8-bit (0–255).</div>
+        </div>
+        <div class="hw-card">
+          <div class="hw-icon">📶</div>
+          <div class="hw-name">ESP-NOW</div>
+          <div class="hw-desc" data-es="Protocolo inalámbrico peer-to-peer sobre WiFi 2.4GHz. Sin router. Latencia mínima entre jugador y portero." data-en="Wireless peer-to-peer protocol over 2.4GHz WiFi. No router. Minimum latency between player and goalkeeper.">Protocolo inalámbrico peer-to-peer sobre WiFi 2.4GHz. Sin router. Latencia mínima entre jugador y portero.</div>
+        </div>
+        <div class="hw-card">
+          <div class="hw-icon">🪵</div>
+          <div class="hw-name" data-es="Chasis MDF Láser" data-en="Laser MDF Chassis">Chasis MDF Láser</div>
+          <div class="hw-desc" data-es="Estructura física cortada con láser en MDF. Diseño 3D modular con compartimentos para electrónica, ruedas amarillas y pala deflectora." data-en="Physical structure laser-cut in MDF. 3D modular design with compartments for electronics, yellow wheels and deflector blade.">Estructura física cortada con láser en MDF. Diseño 3D modular con compartimentos para electrónica, ruedas amarillas y pala deflectora.</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARCHIVOS INO -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="💻 Archivos del firmware" data-en="💻 Firmware Files">💻 Archivos del firmware</h2>
+      <div class="ino-files">
+        <div class="ino-card">
+          <div class="ino-header">
+            <span class="ino-icon">⚽</span>
+            <div>
+              <div class="ino-name">Robot1Jugador.ino</div>
+              <div class="ino-desc" data-es="Agente atacante — MLP + PSO + GA + ESP-NOW sender" data-en="Attacking agent — MLP + PSO + GA + ESP-NOW sender">Agente atacante — MLP + PSO + GA + ESP-NOW sender</div>
+            </div>
+          </div>
+          <ul class="ino-features">
+            <li data-es="FSM: BUSCAR / ATACAR / PELEAR / EVITAR" data-en="FSM: SEARCH / ATTACK / FIGHT / AVOID">FSM: BUSCAR / ATACAR / PELEAR / EVITAR</li>
+            <li data-es="Envía {dirección, estado, distCentro} al portero cada ciclo" data-en="Sends {direction, state, centerDist} to goalkeeper every cycle">Envía {dirección, estado, distCentro} al portero cada ciclo</li>
+            <li data-es="PWM ajustado por genes[2]: vel = 180 + genes[2]×75" data-en="PWM adjusted by genes[2]: vel = 180 + genes[2]×75">PWM ajustado por genes[2]: vel = 180 + genes[2]×75</li>
+          </ul>
+        </div>
+        <div class="ino-card">
+          <div class="ino-header">
+            <span class="ino-icon">🥅</span>
+            <div>
+              <div class="ino-name">Robot2Portero.ino</div>
+              <div class="ino-desc" data-es="Agente defensor — MLP + 2 Perceptrones + PSO + GA + ESP-NOW receiver" data-en="Defending agent — MLP + 2 Perceptrons + PSO + GA + ESP-NOW receiver">Agente defensor — MLP + 2 Perceptrones + PSO + GA + ESP-NOW receiver</div>
+            </div>
+          </div>
+          <ul class="ino-features">
+            <li data-es="FSM: QUIETO / ORIENTAR / BLOQUEAR / DESPEJAR" data-en="FSM: IDLE / ORIENT / BLOCK / CLEAR">FSM: QUIETO / ORIENTAR / BLOQUEAR / DESPEJAR</li>
+            <li data-es="Perceptrón de peligro: 5 entradas → amenaza → umbral genes[0]" data-en="Danger perceptron: 5 inputs → threat → genes[0] threshold">Perceptrón de peligro: 5 entradas → amenaza → umbral genes[0]</li>
+            <li data-es="Perceptrón de alineación: di_n, dd_n, dir_jugador → girar izq/der" data-en="Alignment perceptron: di_n, dd_n, player_dir → turn left/right">Perceptrón de alineación: di_n, dd_n, dir_jugador → girar izq/der</li>
+          </ul>
+        </div>
+        <div class="ino-card">
+          <div class="ino-header">
+            <span class="ino-icon">🔬</span>
+            <div>
+              <div class="ino-name">clasificador.ino</div>
+              <div class="ino-desc" data-es="Módulo de prueba autónomo — solo clasificación NN con Serial Monitor" data-en="Autonomous test module — NN classification only with Serial Monitor">Módulo de prueba autónomo — solo clasificación NN con Serial Monitor</div>
+            </div>
+          </div>
+          <ul class="ino-features">
+            <li data-es="Imprime clase, confianza y probabilidades de las 4 clases en tiempo real" data-en="Prints class, confidence and probabilities of all 4 classes in real time">Imprime clase, confianza y probabilidades de las 4 clases en tiempo real</li>
+            <li data-es="Útil para validar sensores y calibrar umbrales antes de integrar" data-en="Useful for validating sensors and calibrating thresholds before integration">Útil para validar sensores y calibrar umbrales antes de integrar</li>
+            <li data-es="Mismo MLP embebido en C++ (pesos hardcodeados en flash del ESP32)" data-en="Same MLP embedded in C++ (weights hardcoded in ESP32 flash)">Mismo MLP embebido en C++ (pesos hardcodeados en flash del ESP32)</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- PDF -->
+    <section class="section" id="section-pdf" data-animate>
+      <h2 class="section-title" data-es="📄 Informe técnico completo" data-en="📄 Full Technical Report">📄 Informe técnico completo</h2>
+      <div class="pdf-block">
+        <div class="pdf-info">
+          <span class="pdf-icon">📄</span>
+          <div>
+            <div class="pdf-name">RobotConIA.pdf</div>
+            <div class="pdf-desc" data-es="Informe completo del sistema — arquitectura IA, datos experimentales, formulas MLP/PSO/GA y conclusiones" data-en="Full system report — AI architecture, experimental data, MLP/PSO/GA formulas and conclusions">Informe completo del sistema — arquitectura IA, datos experimentales, formulas MLP/PSO/GA y conclusiones</div>
+          </div>
+        </div>
+        <a href="RobotConIA.pdf" target="_blank" class="btn-download">⬇ <span data-es="Descargar PDF" data-en="Download PDF">Descargar PDF</span></a>
+      </div>
+      <div class="pdf-viewer">
+        <iframe src="RobotConIA.pdf" title="RobotConIA Informe PDF"></iframe>
+      </div>
+    </section>
+
+    <!-- TECNOLOGIAS -->
+    <section class="section" data-animate>
+      <h2 class="section-title" data-es="🛠️ Tecnologías y herramientas" data-en="🛠️ Technologies & Tools">🛠️ Tecnologías y herramientas</h2>
+      <div class="tech-tags">
+        <span class="tech-tag tag-blue">ESP32</span>
+        <span class="tech-tag tag-cyan">MLP Neural Network</span>
+        <span class="tech-tag tag-purple">Genetic Algorithm</span>
+        <span class="tech-tag tag-purple">PSO</span>
+        <span class="tech-tag tag-cyan">Softmax · Sigmoid</span>
+        <span class="tech-tag tag-orange">Arduino C++</span>
+        <span class="tech-tag tag-blue">ESP-NOW</span>
+        <span class="tech-tag tag-gray">HC-SR04</span>
+        <span class="tech-tag tag-gray">TCS34725</span>
+        <span class="tech-tag tag-gray">TB6612FNG</span>
+        <span class="tech-tag tag-purple">FSM</span>
+        <span class="tech-tag tag-green">RoboCup SSL</span>
+        <span class="tech-tag tag-orange">CAD 3D</span>
+        <span class="tech-tag tag-wood">MDF Láser</span>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-icon">🤖⚽</div>
+    <span>© 2025 Cristian Leon &nbsp;·&nbsp;</span>
+    <a href="../../index.html">← <span data-es="Volver al portafolio" data-en="Back to portfolio">Volver al portafolio</span></a>
+  </footer>
+
+  <script src="RobotsConIA.js"></script>
+</body>
+</html>
