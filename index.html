@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cristian Leon — Portafolio</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="styles.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
 
   <header>
     <div class="logo-wrap">
       <div class="logo-text">
         Cristian Leon
-        <span data-es="Ciencias de la Computación e IA" data-en="Computer Science & AI">Ciencias de la Computación e IA</span>
+        <span data-es="Ciencias de la Computación e IA" data-en="Computer Science & AI">Ciencias de la Computación e
+          IA</span>
       </div>
     </div>
     <div class="header-right">
       <div class="header-tag">&lt;/&gt; Portfolio</div>
       <div class="lang-switch">
         <button class="lang-btn active" onclick="setLang('es')">ES</button>
-        <button class="lang-btn"        onclick="setLang('en')">EN</button>
+        <button class="lang-btn" onclick="setLang('en')">EN</button>
       </div>
     </div>
   </header>
@@ -28,14 +31,17 @@
   <section class="hero">
     <h1>Cristian Leon</h1>
     <p data-es="Estudiante de Ciencias de la Computación e IA, apasionado por construir soluciones inteligentes y proyectos con impacto real."
-       data-en="Computer Science & AI student, passionate about building intelligent solutions and projects with real impact.">
-      Estudiante de Ciencias de la Computación e IA, apasionado por construir soluciones inteligentes y proyectos con impacto real.
+      data-en="Computer Science & AI student, passionate about building intelligent solutions and projects with real impact.">
+      Estudiante de Ciencias de la Computación e IA, apasionado por construir soluciones inteligentes y proyectos con
+      impacto real.
     </p>
     <div class="hero-badge">
-      <span class="badge" data-es="Ciencias de la Computación" data-en="Computer Science">Ciencias de la Computación</span>
-      <span class="badge" data-es="Inteligencia Artificial"    data-en="Artificial Intelligence">Inteligencia Artificial</span>
-      <span class="badge" data-es="Desarrollo Web"             data-en="Web Development">Desarrollo Web</span>
-      <span class="badge" data-es="Robótica"                   data-en="Robotics">Robótica</span>
+      <span class="badge" data-es="Ciencias de la Computación" data-en="Computer Science">Ciencias de la
+        Computación</span>
+      <span class="badge" data-es="Inteligencia Artificial" data-en="Artificial Intelligence">Inteligencia
+        Artificial</span>
+      <span class="badge" data-es="Desarrollo Web" data-en="Web Development">Desarrollo Web</span>
+      <span class="badge" data-es="Robótica" data-en="Robotics">Robótica</span>
     </div>
   </section>
 
@@ -43,8 +49,10 @@
     <div class="section-title">
       <h2 data-es="Proyectos" data-en="Projects">Proyectos</h2>
       <p data-es="Una breve colección de trabajo académico y personal que demuestra mis habilidades técnicas, creatividad y pasión por la tecnología. Cada proyecto incluye una descripción detallada, tecnologías utilizadas y recursos para explorar más a fondo."
-         data-en="A brief collection of academic and personal work that showcases my technical skills, creativity, and passion for technology. Each project includes a detailed description, the technologies used, and resources for further exploration.">
-         Una breve colección de trabajo académico y personal que demuestra mis habilidades técnicas, creatividad y pasión por la tecnología. Cada proyecto incluye una descripción detallada, tecnologías utilizadas y recursos para explorar más a fondo.
+        data-en="A brief collection of academic and personal work that showcases my technical skills, creativity, and passion for technology. Each project includes a detailed description, the technologies used, and resources for further exploration.">
+        Una breve colección de trabajo académico y personal que demuestra mis habilidades técnicas, creatividad y pasión
+        por la tecnología. Cada proyecto incluye una descripción detallada, tecnologías utilizadas y recursos para
+        explorar más a fondo.
       </p>
       <div class="divider"></div>
     </div>
@@ -52,130 +60,15 @@
     <div class="project-grid" id="project-grid">
 
       <!-- CARD 1 -->
-      <div class="card card-moto" onclick="window.location.href='proyectos/NPproblems/NPproblems.html'">
-        <div class="card-icon">🏍️</div>
-        <div class="card-badge" data-es="Mecánica · Sistemas de combustible" data-en="Mechanics · Fuel Systems">Mecánica · Sistemas de combustible</div>
-        <h3 data-es="Full Injection &amp; Carburadores" data-en="Full Injection &amp; Carburetors">Full Injection &amp; Carburadores</h3>
-        <p data-es="Análisis técnico comparativo entre sistemas de carburación e inyección electrónica: AFR, ancho de pulso, densidad del aire y consumo. Incluye fórmulas y diagnóstico real."
-           data-en="Comparative technical analysis between carburetion and electronic injection systems: AFR, pulse width, air density, and fuel consumption. Includes formulas and real-world diagnostics.">
-          Análisis técnico comparativo entre sistemas de carburación e inyección electrónica: AFR, ancho de pulso, densidad del aire y consumo. Incluye fórmulas y diagnóstico real.
-        </p>
-        <div class="tags">
-          <span class="tag" data-es="Mecánica"    data-en="Mechanics">Mecánica</span>
-          <span class="tag" data-es="Diagnóstico" data-en="Diagnostics">Diagnóstico</span>
-          <span class="tag">Sistemas</span>
-          <span class="tag">Python</span>
-        </div>
-        <div class="files-label" data-es="📎 Recursos" data-en="📎 Resources">📎 Recursos</div>
-        <div class="files-list">
-          <a class="file-item" href="proyectos/NPproblems/NPproblems.html"
-             data-es="📄 Ver proyecto completo" data-en="📄 View full project">📄 Ver proyecto completo</a>
-          <a class="file-item" href="proyectos/NPproblems/CarboradoresvsFullInyection.pdf" target="_blank"
-             data-es="📊 Informe PDF" data-en="📊 PDF Report">📊 Informe PDF</a>
-        </div>
-      </div>
-
-      <!-- CARD 2 -->
-      <div class="card card-academic" onclick="window.location.href='proyectos/NotaFinal/NotaFinal.html'">
-        <div class="card-icon">🎓</div>
-        <div class="card-badge" data-es="Web · Educación · Utilidad" data-en="Web · Education · Utility">Web · Educación · Utilidad</div>
-        <h3 data-es="Calculadora de Nota Final" data-en="Final Grade Calculator">Calculadora de Nota Final</h3>
-        <p data-es="Aplicación web educativa para calcular la nota mínima necesaria para aprobar y la definitiva por cortes. Soporta distribuciones proporcionales e igualitarias con interfaz responsiva moderna."
-           data-en="Educational web app to calculate the minimum passing grade and the final grade per grading period. Supports proportional and equal distributions with a modern responsive interface.">
-          Aplicación web educativa para calcular la nota mínima necesaria para aprobar y la definitiva por cortes. Soporta distribuciones proporcionales e igualitarias con interfaz responsiva moderna.
-        </p>
-        <div class="tags">
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">UX</span>
-        </div>
-        <div class="files-label" data-es="📎 Recursos" data-en="📎 Resources">📎 Recursos</div>
-        <div class="files-list">
-          <a class="file-item" href="https://calcularnotafinal.vercel.app/" target="_blank"
-             data-es="🌐 Demo en vivo" data-en="🌐 Live Demo">🌐 Demo en vivo</a>
-          <a class="file-item" href="#"
-             data-es="💾 Repositorio GitHub" data-en="💾 GitHub Repository">💾 Repositorio GitHub</a>
-        </div>
-      </div>
-
-      <!-- CARD 3 -->
-      <div class="card card-nomina" onclick="window.location.href='proyectos/Nomina/Nomina.html'">
-        <div class="card-icon">💼</div>
-        <div class="card-badge" data-es="Web · Finanzas · Automatización" data-en="Web · Finance · Automation">Web · Finanzas · Automatización</div>
-        <h3 data-es="Calculadora de Nómina" data-en="Payroll Calculator">Calculadora de Nómina</h3>
-        <p data-es="Sistema web para el cálculo automático de nómina colombiana. Genera desglose completo de salario base, deducciones de ley, prestaciones sociales y pagos netos."
-           data-en="Web system for automatic Colombian payroll calculation. Generates a full breakdown of base salary, legal deductions, social benefits, and net payments.">
-          Sistema web para el cálculo automático de nómina colombiana. Genera desglose completo de salario base, deducciones de ley, prestaciones sociales y pagos netos.
-        </p>
-        <div class="tags">
-          <span class="tag">HTML</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag" data-es="Lógica" data-en="Logic">Lógica</span>
-          <span class="tag" data-es="Finanzas" data-en="Finance">Finanzas</span>
-        </div>
-        <div class="files-label" data-es="📎 Recursos" data-en="📎 Resources">📎 Recursos</div>
-        <div class="files-list">
-          <a class="file-item" href="https://nomina-tau.vercel.app/" data-es="🌐 Demo en vivo"       data-en="🌐 Live Demo">🌐 Demo en vivo</a>
-          <a class="file-item" href="https://github.com/TesterLucy/Nomina.git" data-es="💾 Repositorio GitHub" data-en="💾 GitHub Repository">💾 Repositorio GitHub</a>
-        </div>
-      </div>
-
-      <!-- CARD 4 -->
-      <div class="card card-voluntariado" onclick="window.location.href='proyectos/Voluntareado/Voluntareado.html'">
-        <div class="card-icon">🤝</div>
-        <div class="card-badge" data-es="App Web · Social · Node.js" data-en="Web App · Social · Node.js">App Web · Social · Node.js</div>
-        <h3 data-es="App de Voluntariado" data-en="Volunteering App">App de Voluntariado</h3>
-        <p data-es="Plataforma web full-stack que conecta voluntarios con organizaciones sociales. Sistema de registro, autenticación, gestión de inscripciones y panel administrativo."
-           data-en="Full-stack web platform connecting volunteers with social organizations. Includes registration, authentication, enrollment management, and an admin dashboard.">
-          Plataforma web full-stack que conecta voluntarios con organizaciones sociales. Sistema de registro, autenticación, gestión de inscripciones y panel administrativo.
-        </p>
-        <div class="tags">
-          <span class="tag">Node.js</span>
-          <span class="tag">HTML</span>
-          <span class="tag">CSS</span>
-          <span class="tag">JavaScript</span>
-          <span class="tag">UI/UX</span>
-        </div>
-        <div class="files-label" data-es="📎 Recursos" data-en="📎 Resources">📎 Recursos</div>
-        <div class="files-list">
-          <a class="file-item" href="#" data-es="🌐 Demo en vivo"       data-en="🌐 Live Demo">🌐 Demo en vivo</a>
-          <a class="file-item" href="https://github.com/TesterLucy/VolunteersApp.git" data-es="💾 Repositorio GitHub" data-en="💾 GitHub Repository">💾 Repositorio GitHub</a>
-        </div>
-      </div>
-
-      <!-- CARD 5 -->
-      <div class="card card-robot" onclick="window.location.href='proyectos/Robots/Robot.html'">
-        <div class="card-icon">🤖</div>
-        <div class="card-badge" data-es="Robótica · ESP32 · RoboCup SSL" data-en="Robotics · ESP32 · RoboCup SSL">Robótica · ESP32 · RoboCup SSL</div>
-        <h3 data-es="Robots Futbolistas" data-en="Football Robots">Robots Futbolistas</h3>
-        <p data-es="Dos robots físicos autónomos con chasis MDF cortado a láser, sensores HC-SR04 y ESP32. Control por FSM con detección de obstáculos, seguimiento de balón y comunicación entre robots."
-           data-en="Two autonomous physical robots with laser-cut MDF chassis, HC-SR04 sensors, and ESP32. FSM-based control with obstacle detection, ball tracking, and inter-robot communication.">
-          Dos robots físicos autónomos con chasis MDF cortado a láser, sensores HC-SR04 y ESP32. Control por FSM con detección de obstáculos, seguimiento de balón y comunicación entre robots.
-        </p>
-        <div class="tags">
-          <span class="tag">ESP32</span>
-          <span class="tag">Arduino C++</span>
-          <span class="tag">FSM</span>
-          <span class="tag" data-es="Robótica" data-en="Robotics">Robótica</span>
-          <span class="tag">RoboCup</span>
-        </div>
-        <div class="files-label" data-es="📎 Recursos" data-en="📎 Resources">📎 Recursos</div>
-        <div class="files-list">
-          <a class="file-item" href="proyectos/Robots/Robot.html"
-             data-es="📄 Ver proyecto completo" data-en="📄 View full project">📄 Ver proyecto completo</a>
-          <a class="file-item" href="https://github.com/TesterLucy/Robots.git" data-es="💾 Repositorio GitHub" data-en="💾 GitHub Repository">💾 Repositorio GitHub</a>
-        </div>
-      </div>
-
-      <!-- CARD 6 -->
       <div class="card card-ia" onclick="window.location.href='proyectos/RobotsConIA/RobotsConIA.html'">
         <div class="card-icon">🧠</div>
-        <div class="card-badge" data-es="IA · MLP · PSO · Algoritmo Genético" data-en="AI · MLP · PSO · Genetic Algorithm">IA · MLP · PSO · Algoritmo Genético</div>
+        <div class="card-badge" data-es="IA · MLP · PSO · Algoritmo Genético"
+          data-en="AI · MLP · PSO · Genetic Algorithm">IA · MLP · PSO · Algoritmo Genético</div>
         <h3 data-es="Robots Futbolistas con IA" data-en="Football Robots with AI">Robots Futbolistas con IA</h3>
         <p data-es="Sistema híbrido de percepción inteligente: Red Neuronal MLP (96.13% precisión) + PSO + Algoritmo Genético. Jugador y Portero autónomos que se coordinan vía ESP-NOW en ciclos de 20ms."
-           data-en="Hybrid intelligent perception system: MLP Neural Network (96.13% accuracy) + PSO + Genetic Algorithm. Autonomous Player and Goalkeeper coordinating via ESP-NOW in 20ms cycles.">
-          Sistema híbrido de percepción inteligente: Red Neuronal MLP (96.13% precisión) + PSO + Algoritmo Genético. Jugador y Portero autónomos que se coordinan vía ESP-NOW en ciclos de 20ms.
+          data-en="Hybrid intelligent perception system: MLP Neural Network (96.13% accuracy) + PSO + Genetic Algorithm. Autonomous Player and Goalkeeper coordinating via ESP-NOW in 20ms cycles.">
+          Sistema híbrido de percepción inteligente: Red Neuronal MLP (96.13% precisión) + PSO + Algoritmo Genético.
+          Jugador y Portero autónomos que se coordinan vía ESP-NOW en ciclos de 20ms.
         </p>
         <div class="tags">
           <span class="tag">MLP</span>
@@ -186,20 +79,24 @@
         </div>
         <div class="files-label" data-es="📎 Recursos" data-en="📎 Resources">📎 Recursos</div>
         <div class="files-list">
-          <a class="file-item" href="proyectos/RobotsConIA/RobotsConIA.html"
-             data-es="📄 Ver proyecto completo" data-en="📄 View full project">📄 Ver proyecto completo</a>
-          <a class="file-item" href="https://github.com/TesterLucy/RobotsConIA.git" data-es="💾 Repositorio GitHub" data-en="💾 GitHub Repository">💾 Repositorio GitHub</a>
+          <a class="file-item" href="proyectos/RobotsConIA/RobotsConIA.html" data-es="📄 Ver proyecto completo"
+            data-en="📄 View full project">📄 Ver proyecto completo</a>
+          <a class="file-item" href="https://github.com/TesterLucy/RobotsConIA.git" data-es="💾 Repositorio GitHub"
+            data-en="💾 GitHub Repository">💾 Repositorio GitHub</a>
         </div>
       </div>
 
-      <!-- CARD 7 -->
+      <!-- CARD 2 -->
       <div class="card card-pele" onclick="window.location.href='proyectos/LenProDeepLearning/Lenguaje.html'">
         <div class="card-icon">⌨️</div>
-        <div class="card-badge" data-es="Lenguaje Propio · ANTLR4 · Deep Learning" data-en="Custom Language · ANTLR4 · Deep Learning">Lenguaje Propio · ANTLR4 · Deep Learning</div>
-        <h3 data-es="PELE — Lenguaje para Deep Learning" data-en="PELE — Deep Learning Language">PELE — Lenguaje para Deep Learning</h3>
+        <div class="card-badge" data-es="Lenguaje Propio · ANTLR4 · Deep Learning"
+          data-en="Custom Language · ANTLR4 · Deep Learning">Lenguaje Propio · ANTLR4 · Deep Learning</div>
+        <h3 data-es="PELE — Lenguaje para Deep Learning" data-en="PELE — Deep Learning Language">PELE — Lenguaje para
+          Deep Learning</h3>
         <p data-es="Lenguaje de programación funcional puro construido desde cero con ANTLR4. Ecosistema de 13 librerías nativas (.pele) para ML/DL: redes neuronales, KNN, K-Means, métricas F1, visualización SVG y más."
-           data-en="Pure functional programming language built from scratch with ANTLR4. Ecosystem of 13 native libraries (.pele) for ML/DL: neural networks, KNN, K-Means, F1 metrics, SVG visualization, and more.">
-          Lenguaje de programación funcional puro construido desde cero con ANTLR4. Ecosistema de 13 librerías nativas (.pele) para ML/DL: redes neuronales, KNN, K-Means, métricas F1, visualización SVG y más.
+          data-en="Pure functional programming language built from scratch with ANTLR4. Ecosystem of 13 native libraries (.pele) for ML/DL: neural networks, KNN, K-Means, F1 metrics, SVG visualization, and more.">
+          Lenguaje de programación funcional puro construido desde cero con ANTLR4. Ecosistema de 13 librerías nativas
+          (.pele) para ML/DL: redes neuronales, KNN, K-Means, métricas F1, visualización SVG y más.
         </p>
         <div class="tags">
           <span class="tag">ANTLR4</span>
@@ -210,8 +107,140 @@
         </div>
         <div class="files-label" data-es="📎 Recursos" data-en="📎 Resources">📎 Recursos</div>
         <div class="files-list">
-          <a class="file-item" href="https://github.com/Cristox1/PELE" target="_blank"
-             data-es="💾 Repositorio GitHub" data-en="💾 GitHub Repository">💾 Repositorio GitHub</a>
+          <a class="file-item" href="https://github.com/TesterLucy/PELE.git" target="_blank"
+            data-es="💾 Repositorio GitHub" data-en="💾 GitHub Repository">💾 Repositorio GitHub</a>
+        </div>
+      </div>
+
+      <!-- CARD 3 -->
+      <div class="card card-voluntariado" onclick="window.location.href='proyectos/Voluntareado/Voluntareado.html'">
+        <div class="card-icon">🤝</div>
+        <div class="card-badge" data-es="App Web · Social · Node.js" data-en="Web App · Social · Node.js">App Web ·
+          Social · Node.js</div>
+        <h3 data-es="App de Voluntariado" data-en="Volunteering App">App de Voluntariado</h3>
+        <p data-es="Plataforma web full-stack que conecta voluntarios con organizaciones sociales. Sistema de registro, autenticación, gestión de inscripciones y panel administrativo."
+          data-en="Full-stack web platform connecting volunteers with social organizations. Includes registration, authentication, enrollment management, and an admin dashboard.">
+          Plataforma web full-stack que conecta voluntarios con organizaciones sociales. Sistema de registro,
+          autenticación, gestión de inscripciones y panel administrativo.
+        </p>
+        <div class="tags">
+          <span class="tag">Node.js</span>
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">UI/UX</span>
+        </div>
+        <div class="files-label" data-es="📎 Recursos" data-en="📎 Resources">📎 Recursos</div>
+        <div class="files-list">
+          <a class="file-item" href="#" data-es="🌐 Demo en vivo" data-en="🌐 Live Demo">🌐 Demo en vivo</a>
+          <a class="file-item" href="https://github.com/TesterLucy/VolunteersApp.git" data-es="💾 Repositorio GitHub"
+            data-en="💾 GitHub Repository">💾 Repositorio GitHub</a>
+        </div>
+      </div>
+
+      <!-- CARD 4 -->
+      <div class="card card-robot" onclick="window.location.href='proyectos/Robots/Robot.html'">
+        <div class="card-icon">🤖</div>
+        <div class="card-badge" data-es="Robótica · ESP32 · RoboCup SSL" data-en="Robotics · ESP32 · RoboCup SSL">
+          Robótica · ESP32 · RoboCup SSL</div>
+        <h3 data-es="Robots Futbolistas" data-en="Football Robots">Robots Futbolistas</h3>
+        <p data-es="Dos robots físicos autónomos con chasis MDF cortado a láser, sensores HC-SR04 y ESP32. Control por FSM con detección de obstáculos, seguimiento de balón y comunicación entre robots."
+          data-en="Two autonomous physical robots with laser-cut MDF chassis, HC-SR04 sensors, and ESP32. FSM-based control with obstacle detection, ball tracking, and inter-robot communication.">
+          Dos robots físicos autónomos con chasis MDF cortado a láser, sensores HC-SR04 y ESP32. Control por FSM con
+          detección de obstáculos, seguimiento de balón y comunicación entre robots.
+        </p>
+        <div class="tags">
+          <span class="tag">ESP32</span>
+          <span class="tag">Arduino C++</span>
+          <span class="tag">FSM</span>
+          <span class="tag" data-es="Robótica" data-en="Robotics">Robótica</span>
+          <span class="tag">RoboCup</span>
+        </div>
+        <div class="files-label" data-es="📎 Recursos" data-en="📎 Resources">📎 Recursos</div>
+        <div class="files-list">
+          <a class="file-item" href="proyectos/Robots/Robot.html" data-es="📄 Ver proyecto completo"
+            data-en="📄 View full project">📄 Ver proyecto completo</a>
+          <a class="file-item" href="https://github.com/TesterLucy/Robots.git" data-es="💾 Repositorio GitHub"
+            data-en="💾 GitHub Repository">💾 Repositorio GitHub</a>
+        </div>
+      </div>
+
+      <!-- CARD 5 -->
+      <div class="card card-moto" onclick="window.location.href='proyectos/NPproblems/NPproblems.html'">
+        <div class="card-icon">🏍️</div>
+        <div class="card-badge" data-es="Mecánica · Sistemas de combustible" data-en="Mechanics · Fuel Systems">Mecánica
+          · Sistemas de combustible</div>
+        <h3 data-es="Full Injection &amp; Carburadores" data-en="Full Injection &amp; Carburetors">Full Injection &amp;
+          Carburadores</h3>
+        <p data-es="Análisis técnico comparativo entre sistemas de carburación e inyección electrónica: AFR, ancho de pulso, densidad del aire y consumo. Incluye fórmulas y diagnóstico real."
+          data-en="Comparative technical analysis between carburetion and electronic injection systems: AFR, pulse width, air density, and fuel consumption. Includes formulas and real-world diagnostics.">
+          Análisis técnico comparativo entre sistemas de carburación e inyección electrónica: AFR, ancho de pulso,
+          densidad del aire y consumo. Incluye fórmulas y diagnóstico real.
+        </p>
+        <div class="tags">
+          <span class="tag" data-es="Mecánica" data-en="Mechanics">Mecánica</span>
+          <span class="tag" data-es="Diagnóstico" data-en="Diagnostics">Diagnóstico</span>
+          <span class="tag">Sistemas</span>
+          <span class="tag">Python</span>
+        </div>
+        <div class="files-label" data-es="📎 Recursos" data-en="📎 Resources">📎 Recursos</div>
+        <div class="files-list">
+          <a class="file-item" href="proyectos/NPproblems/NPproblems.html" data-es="📄 Ver proyecto completo"
+            data-en="📄 View full project">📄 Ver proyecto completo</a>
+          <a class="file-item" href="proyectos/NPproblems/CarboradoresvsFullInyection.pdf" target="_blank"
+            data-es="📊 Informe PDF" data-en="📊 PDF Report">📊 Informe PDF</a>
+        </div>
+      </div>
+
+      <!-- CARD 6 -->
+      <div class="card card-academic" onclick="window.location.href='proyectos/NotaFinal/NotaFinal.html'">
+        <div class="card-icon">🎓</div>
+        <div class="card-badge" data-es="Web · Educación · Utilidad" data-en="Web · Education · Utility">Web · Educación
+          · Utilidad</div>
+        <h3 data-es="Calculadora de Nota Final" data-en="Final Grade Calculator">Calculadora de Nota Final</h3>
+        <p data-es="Aplicación web educativa para calcular la nota mínima necesaria para aprobar y la definitiva por cortes. Soporta distribuciones proporcionales e igualitarias con interfaz responsiva moderna."
+          data-en="Educational web app to calculate the minimum passing grade and the final grade per grading period. Supports proportional and equal distributions with a modern responsive interface.">
+          Aplicación web educativa para calcular la nota mínima necesaria para aprobar y la definitiva por cortes.
+          Soporta distribuciones proporcionales e igualitarias con interfaz responsiva moderna.
+        </p>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">CSS</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag">UX</span>
+        </div>
+        <div class="files-label" data-es="📎 Recursos" data-en="📎 Resources">📎 Recursos</div>
+        <div class="files-list">
+          <a class="file-item" href="https://calcularnotafinal.vercel.app/" target="_blank" data-es="🌐 Demo en vivo"
+            data-en="🌐 Live Demo">🌐 Demo en vivo</a>
+          <a class="file-item" href="#" data-es="💾 Repositorio GitHub" data-en="💾 GitHub Repository">💾 Repositorio
+            GitHub</a>
+        </div>
+      </div>
+
+      <!-- CARD 7 -->
+      <div class="card card-nomina" onclick="window.location.href='proyectos/Nomina/Nomina.html'">
+        <div class="card-icon">💼</div>
+        <div class="card-badge" data-es="Web · Finanzas · Automatización" data-en="Web · Finance · Automation">Web ·
+          Finanzas · Automatización</div>
+        <h3 data-es="Calculadora de Nómina" data-en="Payroll Calculator">Calculadora de Nómina</h3>
+        <p data-es="Sistema web para el cálculo automático de nómina colombiana. Genera desglose completo de salario base, deducciones de ley, prestaciones sociales y pagos netos."
+          data-en="Web system for automatic Colombian payroll calculation. Generates a full breakdown of base salary, legal deductions, social benefits, and net payments.">
+          Sistema web para el cálculo automático de nómina colombiana. Genera desglose completo de salario base,
+          deducciones de ley, prestaciones sociales y pagos netos.
+        </p>
+        <div class="tags">
+          <span class="tag">HTML</span>
+          <span class="tag">JavaScript</span>
+          <span class="tag" data-es="Lógica" data-en="Logic">Lógica</span>
+          <span class="tag" data-es="Finanzas" data-en="Finance">Finanzas</span>
+        </div>
+        <div class="files-label" data-es="📎 Recursos" data-en="📎 Resources">📎 Recursos</div>
+        <div class="files-list">
+          <a class="file-item" href="https://nomina-tau.vercel.app/" data-es="🌐 Demo en vivo" data-en="🌐 Live Demo">🌐
+            Demo en vivo</a>
+          <a class="file-item" href="https://github.com/TesterLucy/Nomina.git" data-es="💾 Repositorio GitHub"
+            data-en="💾 GitHub Repository">💾 Repositorio GitHub</a>
         </div>
       </div>
 
@@ -219,7 +248,8 @@
   </section>
 
   <footer>
-    <p>&copy; 2025 <span>Cristian Leon</span> · <span data-es="Ciencias de la Computación e IA" data-en="Computer Science & AI">Ciencias de la Computación e IA</span></p>
+    <p>&copy; 2025 <span>Cristian Leon</span> · <span data-es="Ciencias de la Computación e IA"
+        data-en="Computer Science & AI">Ciencias de la Computación e IA</span></p>
     <div class="footer-links">
       <a href="#">GitHub</a>
       <a href="#">LinkedIn</a>
@@ -229,4 +259,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
